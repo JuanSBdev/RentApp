@@ -1,0 +1,8 @@
+.map-container {
+  max-height: 400px; /* Establece una altura fija para el contenedor del mapa */
+  width: 100%; /* Establece un ancho del 100% o un valor fijo */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
