@@ -4,7 +4,7 @@ const {Place} = require('../../db')
 
 let getPlaces = async (req, res)=>{
     try {
-        const response = await axios.get(url)
+        const response = await axios.get(endpoint)
         const data = response.data;
         const place = data.map(placeX =>{
             return({
@@ -29,3 +29,4 @@ let getPlaces = async (req, res)=>{
         res.status(400).json(error.message)
     }
 }
+module.exports = getPlaces;
