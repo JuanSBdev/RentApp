@@ -27,8 +27,20 @@ module.exports = (sequelize) =>{
         },
         price_per_night:{
             type:DataTypes.INTEGER,
-        }
-
+        },
+        rating: {
+            type: DataTypes.INTEGER,
+            validate: {
+                min: 1, // Valor mínimo
+                max: 5, // Valor máximo
+            }
+        },
+        services: {
+            type: DataTypes.ARRAY(DataTypes.STRING),
+        },
+        unavailable_dates: {
+            type: DataTypes.ARRAY(DataTypes.DATE),
+        },
 
 
     })
