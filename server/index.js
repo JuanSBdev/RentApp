@@ -1,6 +1,6 @@
 const {conn }= require('./src/db')
 const app = require('./src/app')
-const port = 0
+const port = 63076
 
 conn.sync({force: true})
 .then(

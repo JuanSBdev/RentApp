@@ -3,7 +3,7 @@ require ('dotenv').config();
 const {DB_DIALECT, DB_USER,DB_PASSWORD,DB_HOST,DB_NAME } =  process.env
 const {Sequelize} = require ('sequelize')
 
-
+const placeModel = require('./models/place')
 
 
 const sequelize = new Sequelize(`${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
@@ -12,7 +12,9 @@ const sequelize = new Sequelize(`${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_
     native:false,
 });
 
-const {Place} = sequelize.models
+
+placeModel(sequelize)
+const { Place } = sequelize.models
 
 module.exports = {...sequelize.models,
     conn:sequelize}

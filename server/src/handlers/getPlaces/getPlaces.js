@@ -1,6 +1,6 @@
 const endpoint = 'http://localhost:5000/accommodations'
 const axios = require('axios')
-const {Place} = require('../../db')
+const { Place}  = require('../../db')
 
 let getPlaces = async (req, res)=>{
     try {
