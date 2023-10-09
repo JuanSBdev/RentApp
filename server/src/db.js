@@ -12,6 +12,7 @@ const sequelize = new Sequelize(`${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_
     native:false,
 });
 
+const {Place} = sequelize.models
 
-module.exports = {
+module.exports = {...sequelize.models,
     conn:sequelize}
