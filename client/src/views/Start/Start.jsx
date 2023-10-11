@@ -1,5 +1,6 @@
 import React from 'react'
 import Styles from './Start.module.css'
+import Nav from '../../components/Nav/Nav'
 
 
 export default function Start() {
@@ -7,13 +8,8 @@ export default function Start() {
     
   return (
     
-    <div>
-        <div className={Styles.nav}>
-            <p>Logo</p>
-            <input type="text" />
-            <p>Contact Us</p>
-            <p>About</p>
-        </div>
+    <div className={Styles.wrapper}>
+        <Nav/>
         <div className={Styles.divImg}>
 
             <img className={Styles.imgInit} src={imgInit}  alt="Cabaña entre montañas" />

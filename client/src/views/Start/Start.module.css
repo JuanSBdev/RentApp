@@ -1,5 +1,6 @@
-.nav{
-    display: flex;
+.wrapper{
+    margin: 0%;
+    width: 130%;
 }
 .divImg{
     border: 1px solid red;
