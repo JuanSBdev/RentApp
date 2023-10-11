@@ -2,11 +2,14 @@
     margin: 0%;
     width: 130%;
 }
-.divImg{
-    border: 1px solid red;
-    /* background-image: url('https://cdn.blessthisstuff.com/imagens/stuff/mountain-guest-house-switzerland.jpg'); */
-    background-size:cover;
-    background-position: center;
+.divForm{
+    border: 1px solid black;
+    padding: 10%;
+    margin: 4%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .imgInit{
 transform: scale(1);
