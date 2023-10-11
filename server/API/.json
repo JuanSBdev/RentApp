@@ -4,101 +4,121 @@
       "id": 1,
       "name": "Blue Beach Hotel",
       "type": "Hotel",
-      "location": "Sun Beach, Coastal City",
+      "location": "Capilla Del Monte, Coastal City",
       "price_per_night": 120.0,
       "rating": 4.5,
       "services": ["Swimming Pool", "Restaurant", "Free Wi-Fi"],
-      "unavailable_dates": ["2023-01-01", "2023-01-02"]
+      "unavailable_dates": ["2023-01-01", "2023-01-02"],
+      "max_occupancy_per_room": 2,
+      "number_of_rooms": 50
     },
     {
       "id": 2,
       "name": "Enchanted Forest Cabin",
       "type": "Cabin",
-      "location": "Mystic Woods, Mountain Village",
+      "location": "Carlos Paz, Mountain Village",
       "price_per_night": 80.0,
       "rating": 4.2,
       "services": ["Fireplace", "Hiking Trails"],
-      "unavailable_dates": ["2023-01-03", "2023-01-04"]
+      "unavailable_dates": ["2023-01-03", "2023-01-04"],
+      "max_occupancy_per_room": 4,
+      "number_of_rooms": 10
     },
     {
       "id": 3,
       "name": "Downtown Urban Apartment",
       "type": "Apartment",
-      "location": "City Center, Metropolis",
+      "location": "Capilla Del Monte, Metropolis",
       "price_per_night": 90.0,
       "rating": 4.0,
       "services": ["Parking", "Full Kitchen"],
-      "unavailable_dates": ["2023-01-01", "2023-01-02"]
+      "unavailable_dates": ["2023-01-01", "2023-01-02"],
+      "max_occupancy_per_room": 3,
+      "number_of_rooms": 20
     },
     {
       "id": 4,
       "name": "Serene River Hostel",
       "type": "Hostel",
-      "location": "Serene Town, Rural Region",
+      "location": "Carlos Paz, Rural Region",
       "price_per_night": 40.0,
       "rating": 4.7,
       "services": ["Free Breakfast", "Garden"],
-      "unavailable_dates": ["2023-01-05", "2023-01-06"]
+      "unavailable_dates": ["2023-01-05", "2023-01-06"],
+      "max_occupancy_per_room": 6,
+      "number_of_rooms": 30
     },
     {
       "id": 5,
       "name": "Seaside Villa",
       "type": "Villa",
-      "location": "Coastal Sea, Coastal City",
+      "location": "Capilla Del Monte, Coastal City",
       "price_per_night": 200.0,
       "rating": 4.9,
       "services": ["Private Pool", "Beach Access"],
-      "unavailable_dates": ["2023-01-03", "2023-01-04"]
+      "unavailable_dates": ["2023-01-03", "2023-01-04"],
+      "max_occupancy_per_room": 8,
+      "number_of_rooms": 5
     },
     {
       "id": 6,
       "name": "Room in Tranquil Country House",
       "type": "Private Room",
-      "location": "Tranquil Valley, Rural Region",
+      "location": "Carlos Paz, Rural Region",
       "price_per_night": 50.0,
       "rating": 4.3,
       "services": ["Free Breakfast", "Terrace with a View"],
-      "unavailable_dates": ["2023-01-01", "2023-01-02"]
+      "unavailable_dates": ["2023-01-01", "2023-01-02"],
+      "max_occupancy_per_room": 2,
+      "number_of_rooms": 15
     },
     {
       "id": 7,
       "name": "Eternal Mountain Resort",
       "type": "Resort",
-      "location": "Green Mountains, Mountain Region",
+      "location": "Capilla Del Monte, Mountain Region",
       "price_per_night": 150.0,
       "rating": 4.6,
       "services": ["Spa", "Tennis Court"],
-      "unavailable_dates": ["2023-01-01", "2023-01-02"]
+      "unavailable_dates": ["2023-01-01", "2023-01-02"],
+      "max_occupancy_per_room": 4,
+      "number_of rooms": 40
     },
     {
       "id": 8,
       "name": "Historic Winery Accommodation",
       "type": "Unique Accommodation",
-      "location": "Ancient Vineyards, Wine Region",
+      "location": "Carlos Paz, Wine Region",
       "price_per_night": 110.0,
       "rating": 4.4,
       "services": ["Wine Tasting", "Winery Tour"],
-      "unavailable_dates": ["2023-01-03", "2023-01-04"]
+      "unavailable_dates": ["2023-01-03", "2023-01-04"],
+      "max_occupancy_per_room": 2,
+      "number_of_rooms": 10
     },
     {
       "id": 9,
       "name": "Lakefront Serene House",
       "type": "Vacation Home",
-      "location": "Tranquil Lake, Mountain Region",
+      "location": "Capilla Del Monte, Mountain Region",
       "price_per_night": 160.0,
       "rating": 4.8,
       "services": ["Private Dock", "Kayaking"],
-      "unavailable_dates": ["2023-01-01", "2023-01-02"]
+      "unavailable_dates": ["2023-01-01", "2023-01-02"],
+      "max_occupancy_per_room": 6,
+      "number_of_rooms": 8
     },
     {
       "id": 10,
       "name": "Old Town Hostel",
       "type": "Hostel",
-      "location": "Old Town, Historic City",
+      "location": "Carlos Paz, Historic City",
       "price_per_night": 70.0,
       "rating": 4.1,
       "services": ["Rooftop Terrace", "Guided Walking Tour"],
-      "unavailable_dates": ["2023-01-03", "2023-01-04"]
+      "unavailable_dates": ["2023-01-03", "2023-01-04"],
+      "max_occupancy_per_room": 4,
+      "number_of_rooms": 25
     }
   ]
 }
