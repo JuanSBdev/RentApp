@@ -6,5 +6,7 @@ const getPlaceByLocationController = async (location)=>{
  },
 }
  )
+ 
+ return placeFound;
 }
 module.exports = getPlaceByLocationController;
