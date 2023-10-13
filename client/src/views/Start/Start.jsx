@@ -10,7 +10,7 @@ export default function Start() {
   return (
     
     <div className={Styles.wrapper}>
-            <Nav/>
+            {/* <Nav/> */}
         <div className={Styles.divForm}>
             <FormStart/>            {/* <img className={Styles.imgInit} src={imgInit}  alt="Cabaña entre montañas" /> */}
         </div>
