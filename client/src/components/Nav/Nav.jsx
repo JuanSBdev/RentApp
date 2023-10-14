@@ -3,63 +3,35 @@ import Styles from './Nav.module.css'
 
 export default function Nav() {
   return (
-    <div>
-       <div className="px-4 mx-auto max-w-7xl sm:px-6">
-    <div className="relative pt-6 pb-16 sm:pb-24">
-        <nav className="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
-            <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
-                <div className="flex items-center justify-between w-full md:w-auto">
-                    <a href="#"><span className="sr-only ">Company Name</span>
-                        <img className="w-auto h-8 sm:h-10" src="https://www.svgrepo.com/show/448244/pack.svg" loading="lazy" width="202" height="40"/>
-                    </a>
-                    <div className="flex items-center -mr-2 md:hidden">
-                        <button className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-50 rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-50"  type="button" aria-expanded="false">
-                            <span className="sr-only ">Open main menu</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true" className="w-6 h-6">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div className="hidden md:flex md:space-x-10 list-none">
-                <li>
-                    <a href="#" className="text-base font-normal text-gray-500 list-none hover:text-gray-900"
-                        target="">Pricing</a>
-                </li>
-                <li>
-                    <a href="#" className="text-base font-normal text-gray-500 list-none hover:text-gray-900"
-                        target="">Gallary
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className="text-base font-normal text-gray-500 list-none hover:text-gray-900"
-                        target="_blank">Blog
-                    </a>
-                </li>
-            </div>
-            <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                <div className="inline-flex rounded-full shadow">
-                    <div href="#"
-                        className="inline-flex items-center px-4 py-2 text-base text-gray-900 bg-white border border-transparent rounded-full cursor-pointer font-base hover:bg-gray-50 ">
-                        Sign in
-                    </div>
-                </div>
-            </div>
-        </nav>
+    <div className={Styles.wrapperNav}> 
+       <div className="navbar bg-base-100">
+  <div className="navbar-start">
+    <div className="dropdown">
+      <label tabIndex={0} className="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+      </label>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>Homepage</a></li>
+        <li><a>Portfolio</a></li>
+        <li><a>About</a></li>
+      </ul>
     </div>
+  </div>
+  <div className="navbar-center">
+    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+  </div>
+  <div className="navbar-end">
+    <button className="btn btn-ghost btn-circle">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+    </button>
+    <button className="btn btn-ghost btn-circle">
+      <div className="indicator">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
+        <span className="badge badge-xs badge-primary indicator-item"></span>
+      </div>
+    </button>
+  </div>
 </div>
-      
-        {/* <div className={Styles.nav}>
-            <div className={Styles.divNavLogo}>
-                <p>Logo</p>
-            </div>
-            <div className={Styles.divNavInfo}>
-
-            <p>Contact Us</p>
-            <p>About</p>
-            </div>
-        </div> */}
     </div>
   )
 }

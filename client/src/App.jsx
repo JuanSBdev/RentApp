@@ -13,7 +13,7 @@ function App() {
     <div className="wrapperApp">
 
       <Nav/>
-      <Start/>
+      <Start />
       <Footer/>
     </div>
   )
