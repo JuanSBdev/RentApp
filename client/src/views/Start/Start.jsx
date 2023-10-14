@@ -2,6 +2,7 @@ import React from 'react'
 import Styles from './Start.module.css'
 import Nav from '../../components/Nav/Nav'
 import FormStart from '../../components/FormStart/FormStart'
+import StartTitle from '../../components/StartTitle/StartTitle'
 
 
 export default function Start() {
@@ -10,7 +11,7 @@ export default function Start() {
   return (
     
     <div className={Styles.wrapper}>
-            {/* <Nav/> */}
+        <StartTitle/>
         <div className={Styles.divForm}>
             <FormStart/>            {/* <img className={Styles.imgInit} src={imgInit}  alt="Cabaña entre montañas" /> */}
         </div>

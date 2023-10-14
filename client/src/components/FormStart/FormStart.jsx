@@ -5,7 +5,7 @@ import '../../../dist/output.css'; // Ajusta la ruta según la ubicación de tu 
 
 export default function FormStart() {
   return (
-    <div className=" flex flex-col items-center justify-center w-screen h-screen  " >
+    <div className= { `${Styles.wrapper} flex flex-col items-center justify-center w-screen h-screen` }  >
        
         
         <form className=" border border-[#259073] flex flex-col items-center bg-[#fcffee] rounded shadow-lg p-5 mt-2  lg:flex-row " action="">

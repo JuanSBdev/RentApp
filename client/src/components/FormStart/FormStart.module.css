@@ -1,5 +1,6 @@
 .wrapper{
-    margin-top: 15%;
-    background-color: #041122;
-
+    margin-top: -5%;
+}
+.wrapper form{
+    background-color: rgb(200, 225, 212);
 }

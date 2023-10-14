@@ -5,7 +5,7 @@ import Styles from './Nav.module.css'
 export default function Nav() {
   return (
     <div className={Styles.wrapperNav}> 
-       <div className="navbar bg-base-100">
+       <div className="navbar ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -18,10 +18,10 @@ export default function Nav() {
       </ul>
     </div>
   </div>
-  <div className=" flex items-center navbar-center">
-    <a className=" normal-case text-xl">Kirá
+  <div className=" flex items-end navbar-center">
+    <a className=" normal-case text-xl text-[#fff]">Kirá
     </a>
-    <p className="text-[gray] text-xl ml-2" >Alquiler</p>
+    <p className="text-[black] text-l ml-2" >Alquiler</p>
   </div>
   <div className="navbar-end">
     <div className="dropdown w-10  ">
