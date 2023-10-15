@@ -5,13 +5,28 @@ import '../../../dist/output.css'; // Ajusta la ruta según la ubicación de tu 
 
 export default function FormStart() {
 
+  let [date, setDate] = useState(
+     {
+      date: null
+     }
+  )
   let [form, setForm] = useState({
     city: "capilla",
-    date: null,
-    guests:""
+    guests:"",
+    date: date
   })
 
 let handleForm = (e)=>{
+  e.preventDefault()
+  
+  let {value, name} = e.target;
+  setForm((prevValues)=>({
+    ...prevValues,
+    [name]: value
+  }))
+}
+
+let handleDate = ()=>{
   e.preventDefault()
   
   let {value, name} = e.target;
@@ -44,7 +59,7 @@ let submitForm =(e)=>{
             <div className="m-1">
 
 	            <label className="font-semibold text-xs mt-3 m-0 lg:ml-5" htmlFor="passwordField ">Desde</           label>
-	            <input onChange={handleForm} name='date' type="date" id="dateInput" className="flex items-center h-12 px-4 w-34 bg-gray-200 ml-0 mt-2              rounded focus:outline-none focus:ring-2 lg:ml-5"/>
+	            <input onChange={handleDate} name='date' type="date" id="dateInput" className="flex items-center h-12 px-4 w-34 bg-gray-200 ml-0 mt-2              rounded focus:outline-none focus:ring-2 lg:ml-5"/>
 
             </div>
             <div className="m-1">
