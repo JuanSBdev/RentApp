@@ -25,8 +25,8 @@ let getPlaces = async (req, res)=>{
         res.status(200).json(places)
         
     } catch (error) {
-        console.log('problem:' + error)
-        res.status(400).json(error.message)
+        // console.log('problem:' + error)
+        // res.status(400).json(error.message)
     }
 }
 module.exports = getPlaces;

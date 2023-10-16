@@ -6,7 +6,6 @@ const getPlaceByLocationHandler = require('../handlers/getPlaces/getPlaceByLocat
 
 
 const router = Router();
-
 router.use('/start', getPlaces )
 router.use('/place/:id', getPlaceById )
 router.use('/place/in/:location', getPlaceByLocationHandler )
