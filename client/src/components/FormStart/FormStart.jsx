@@ -5,15 +5,16 @@ import '../../../dist/output.css'; // Ajusta la ruta según la ubicación de tu 
 
 export default function FormStart() {
 
-  let [date, setDate] = useState(
-     {
-      date: null
-     }
-  )
+  // let [date, setDate] = useState(
+  //    {
+  //     date: null
+  //    }
+  // )
   let [form, setForm] = useState({
     city: "capilla",
     guests:"",
-    date: date
+    dateFrom: "",
+    dateTo: ""
   })
 
 let handleForm = (e)=>{
@@ -54,18 +55,18 @@ let submitForm =(e)=>{
                     <option value="carlos">Carlos Paz</option>
                     <option value="falda">La Falda</option>
               </select>
-	            {/* <input className="flex items-center h-12 px-4 w-64 bg-gray-200 mt-2             rounded focus:outline-none focus:ring-2" type="text"/> */}
+	            
             </div>
             <div className="m-1">
 
 	            <label className="font-semibold text-xs mt-3 m-0 lg:ml-5" htmlFor="passwordField ">Desde</           label>
-	            <input onChange={handleDate} name='date' type="date" id="dateInput" className="flex items-center h-12 px-4 w-34 bg-gray-200 ml-0 mt-2              rounded focus:outline-none focus:ring-2 lg:ml-5"/>
+	            <input onChange={handleForm} name='dateFrom' type="date" id="dateInput" className="flex items-center h-12 px-4 w-34 bg-gray-200 ml-0 mt-2              rounded focus:outline-none focus:ring-2 lg:ml-5"/>
 
             </div>
             <div className="m-1">
 
 	            <label className="font-semibold text-xs mt-3 m-0 lg:ml-5"  htmlFor="passwordField">Hasta</           label>
-	            <input onChange={handleForm} type="date" id="dateInput" className="flex items-center h-12 px-4 w-34 bg-gray-200 ml-0 mt-2  rounded focus:outline-none focus:ring-2 lg:ml-5"/>
+	            <input onChange={handleForm} type="date" name='dateTo' id="dateInput" className="flex items-center h-12 px-4 w-34 bg-gray-200 ml-0 mt-2  rounded focus:outline-none focus:ring-2 lg:ml-5"/>
 
             </div>
             <div className="m-1">
