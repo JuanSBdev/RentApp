@@ -2,7 +2,6 @@ const express = require ('express')
 const app = express()
 const morgan = require('morgan')
 const router = require('./routes/index')
-// const getPlaces = require('./handlers/getPlaces/getPlaces')
 
 app.use(morgan('dev'))
 
@@ -16,7 +15,6 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE')
     next()
   })
-  // getPlaces()
 
 app.use('/', router) 
 module.exports = app
