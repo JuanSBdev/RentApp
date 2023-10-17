@@ -1,15 +1,14 @@
 import React, {useState} from 'react'
 import Styles from './FormStart.module.css'
 import '../../../dist/output.css'; // Ajusta la ruta según la ubicación de tu archivo CSS
+import { useDispatch } from 'react-redux';
+import { getPlaceByName } from '../../redux/actions';
 
 
 export default function FormStart() {
 
-  // let [date, setDate] = useState(
-  //    {
-  //     date: null
-  //    }
-  // )
+  let dispatch = useDispatch()
+  
   let [form, setForm] = useState({
     city: "capilla",
     guests:"",
@@ -38,7 +37,8 @@ let handleDate = ()=>{
 }
 let submitForm =(e)=>{
   e.preventDefault()
-  console.log(form)
+  console.log(form.city + 'from form')
+  dispatch(getPlaceByName(form.city))
 }
 
 

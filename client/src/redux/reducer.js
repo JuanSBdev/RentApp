@@ -7,7 +7,8 @@ const initialState = {
     switch (action.type) {
         case GET_NAME:
             return {
-                
+                ...state,
+                place: action.payload
             }
         default:
             return state
