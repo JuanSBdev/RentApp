@@ -8,8 +8,9 @@ export default function Places() {
     let places = useSelector(state=> state.place)
   return (
     places.length > 1 ? (
-    
-<div className={` ${Styles.wrapper}  wrapper bg-gray-400 antialiased text-gray-900`}>
+    places.map(place =>(
+
+        <div className={` ${Styles.wrapper}  wrapper bg-gray-400 antialiased text-gray-900`}>
 <div>
     
     <img src="https://source.unsplash.com/random/350x350" alt=" random imgee" className="w-full object-cover object-center rounded-lg shadow-md"/>    
@@ -21,18 +22,20 @@ export default function Places() {
         New
       </span>
       <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
-    2 baths  &bull; 3 rooms
+    2 baths  &bull; {place.number_of_rooms}
   </div>  
     </div>
     
-    <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">A random Title</h4>
+    <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">{place.name}</h4>
+    <span className="text-gray-600 text-sm"> {place.location} </span>
  
   <div className="mt-1">
-    $1800
-    <span className="text-gray-600 text-sm">   /wk</span>
+    <span className="text-gray-600 text-sm"> from </span>
+    {place.price_per_night}$
+    <span className="text-gray-600 text-sm"> pn</span>
   </div>
   <div className="mt-4">
-    <span className="text-teal-600 text-md font-semibold">4/5 ratings </span>
+    <span className="text-teal-600 text-md font-semibold">{place.rating} / 5 </span>
     <span className="text-sm text-gray-600">(based on 234 ratings)</span>
   </div>  
   </div>
@@ -40,10 +43,11 @@ export default function Places() {
   
 </div>
   </div>
+))
 
 
 
-            
+
     ) : (
         <div className="">
             <h2>Comienza tu busqueda</h2>
