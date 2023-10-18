@@ -3,7 +3,7 @@ import Styles from './Start.module.css'
 import Nav from '../../components/Nav/Nav'
 import FormStart from '../../components/FormStart/FormStart'
 import StartTitle from '../../components/StartTitle/StartTitle'
-import Places from '../places/Places'
+import Places from '../../components/places/Places'
 
 
 export default function Start() {
