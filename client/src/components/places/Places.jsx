@@ -8,7 +8,7 @@ export default function Places(props) {
     // let places = useSelector(state=> state.props)
   return (
     
-        <div className={` ${Styles.wrapper}  bg-gray-400 antialiased text-gray-900`}>
+        <div className={` ${Styles.wrapper} wrapper mt-14 antialiased text-gray-900`}>
 
          <div className={`${Styles.card} `}>
 
@@ -46,6 +46,8 @@ export default function Places(props) {
 </div>
             </div>
   </div>
+
+
 
   )
 }
