@@ -1,5 +1,11 @@
 .wrapper{
-  display:grid;
-  height:100vh;
-  place-items:center
+    display: flex;
+    gap: 12%;
+    /* grid-template-rows: 50px, 50px;
+    grid-template-columns: 10px, 10px, 10px;    place-items:center;
+    height:100vh;
+    gap: 2px; */
 }
+/* .card{
+    width: 100%;
+} */
