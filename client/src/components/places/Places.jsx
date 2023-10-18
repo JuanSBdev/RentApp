@@ -7,8 +7,7 @@ export default function Places(props) {
 
     // let places = useSelector(state=> state.props)
   return (
-    // places.length > 1 ? (
-        // places.map(props =>(
+    
         <div className={` ${Styles.wrapper}  bg-gray-400 antialiased text-gray-900`}>
 
          <div className={`${Styles.card} `}>
@@ -47,16 +46,6 @@ export default function Places(props) {
 </div>
             </div>
   </div>
-// ))
 
-
-
-
-//     ) : (
-//         <div className="">
-//             <h2>Comienza tu busqueda</h2>
-//         </div>
-//     )
-//   ) 
   )
 }

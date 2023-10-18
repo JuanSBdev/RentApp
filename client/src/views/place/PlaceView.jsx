@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Places from '../../components/places/Places'
+import Styles from './PlaceView.module.css'
 
 export default function PlaceView() {
     let places = useSelector(state=> state.place)
