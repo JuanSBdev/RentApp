@@ -14,7 +14,9 @@ let getPlaces = async (req, res)=>{
                 price_per_night:placeX.price_per_night,
                 rating:placeX.rating,
                 services:placeX.services,
-                unavailable_dates:placeX.unavailable_dates
+                unavailable_dates:placeX.unavailable_dates,
+                max_occupancy_per_room:placeX.max_occupancy_per_room,
+                number_of_rooms:placeX.number_of_rooms
 
 
             })
