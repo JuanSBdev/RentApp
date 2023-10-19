@@ -5,19 +5,33 @@ import FormStart from '../../components/FormStart/FormStart'
 import StartTitle from '../../components/StartTitle/StartTitle'
 import Places from '../../components/places/Places'
 import PlaceView from '../place/PlaceView'
+import { useSelector } from 'react-redux'
+import NoPlace from '../../components/Inicio/NoPlace'
 
 
 export default function Start() {
-    let imgInit = 'https://cdn.blessthisstuff.com/imagens/stuff/mountain-guest-house-switzerland.jpg'
+
+  let places = useSelector(state => state.place)
     
   return (
     
     <div className={Styles.wrapper}>
         <StartTitle/>
         <div className={Styles.divForm}>
-            <FormStart/>            {/* <img className={Styles.imgInit} src={imgInit}  alt="Cabaña entre montañas" /> */}
-        </div>
-        <PlaceView/>
+            <FormStart/> 
+       </div>
+       {
+        places.length > 1 ? (
+          <div className={Styles.place}>
+
+            <PlaceView/>
+          </div>
+        ):(
+          <div className={Styles.noPlace}>
+            <NoPlace/>
+          </div>
+        )
+        }
     </div>
   )
 }

@@ -8,9 +8,6 @@
     justify-content: center;
     align-items: center;
 }
-.imgInit{
-transform: scale(1);
-width: 150%;
-max-height:500px;
-display: flex;
+.place{
+    margin-top: -15%;
 }
