@@ -7,8 +7,8 @@ export default function PlaceView() {
     let places = useSelector(state=> state.place)
       return (
           
+        <div className={Styles.wrapper}>{
           places.map((place, index) => (
-            <div className={Styles.wrapper}>
             <Places key={index}
             max_occupancy_per_room={place.max_occupancy_per_room}
             type={place.type}
@@ -18,7 +18,7 @@ export default function PlaceView() {
             rating={place.rating}
             
             />
+        ))}
             </div>
-        ))
   )
 }
