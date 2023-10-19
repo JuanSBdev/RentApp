@@ -39,6 +39,8 @@ let submitForm =(e)=>{
   e.preventDefault()
   console.log(form.city + 'from form')
   dispatch(getPlaceByName(form.city))
+
+  // window.scrollBy(0, 500);
 }
 
 
@@ -46,7 +48,7 @@ let submitForm =(e)=>{
     <div className= { `${Styles.wrapper} flex flex-col items-center justify-center w-screen h-screen` }  >
        
         
-        <form  className=" border border-[#259073] flex flex-col items-center bg-[#fcffee] rounded shadow-lg p-5 mt-2  lg:flex-row " action="">
+        <form  className=" border border-[#259073] flex flex-col items-center bg-[#fcffee] rounded shadow-lg p-5 mt-0  lg:flex-row " action="">
             <div >
 
 	            <label className="font-semibold text-xs" htmlFor="usernameField">Ciudad</label>

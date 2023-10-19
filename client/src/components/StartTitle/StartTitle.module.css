@@ -1,10 +1,9 @@
 .wrapper{
     color: rgb(232, 240, 231);
-    
 }
 .wrapper h1{
     font-family: 'Hind', sans-serif;
     font-size: 2rem;
-    margin-bottom: -13%;
-    margin-top: 12%;
+    /* margin-bottom: -13%;
+    margin-top: 12%; */
 }
