@@ -38,7 +38,10 @@ let handleDate = ()=>{
 let submitForm =(e)=>{
   e.preventDefault()
   console.log(form.city + 'from form')
-  dispatch(getPlaceByName(form.city))
+  if(form.city){
+
+    dispatch(getPlaceByName(form.city))
+  }
 
   // window.scrollBy(0, 500);
 }
