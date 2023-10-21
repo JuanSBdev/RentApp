@@ -42,6 +42,10 @@ let submitForm =(e)=>{
 
     dispatch(getPlaceByName(form.city))
   }
+  if(form.guests){
+
+    dispatch(getPlaceByName(form.city))
+  }
 
   // window.scrollBy(0, 500);
 }
