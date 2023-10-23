@@ -18,3 +18,14 @@ export const getPlaceByName = (placeName) =>{
         }
     }
 } 
+
+export const getPlaceByGuest = (guestsQ)=>{
+    return async (dispatch)=>{
+        let endpoint = `http://localhost:63076/place/for/${guestsQ}`
+        try {
+            
+        } catch (error) {
+            
+        }
+    }
+}
