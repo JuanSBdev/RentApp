@@ -4,7 +4,7 @@ const {Op} = require ('sequelize')
  const getPlacesByGuestsController = async (guests) => {
     const placeFound = await Place.findAll({
         where:{
-            guests:{
+            max_occupancy_per_room:{
                 [Op.gte]: guests
             }
         }

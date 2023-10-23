@@ -1,6 +1,7 @@
 const getPlacesByGuestsController = require("../../controllers/getPlaces/getPlacesByGuestsController")
 
-const getPlaceByGuestsHandler = async (guests)=>{
+const getPlaceByGuestsHandler = async (req, res)=>{
+    let { guests } = req.params;
     try {
         let result = getPlacesByGuestsController(guests)
         res.status(200).json(result)
