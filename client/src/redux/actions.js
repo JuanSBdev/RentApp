@@ -1,5 +1,5 @@
 import axios from 'axios'
-import  {GET_NAME} from './action_types'
+import  {GET_GUESTS, GET_NAME} from './action_types'
  
 export const getPlaceByName = (placeName) =>{
     return async(dispatch) =>{
@@ -7,7 +7,7 @@ export const getPlaceByName = (placeName) =>{
         try {
             const response = await axios.get(endpoint)
             const data = response.data;
-            console.log(data)
+            // console.log(data)
             dispatch({
                 type: GET_NAME,
                 payload: data
@@ -23,9 +23,15 @@ export const getPlaceByGuest = (guestsQ)=>{
     return async (dispatch)=>{
         let endpoint = `http://localhost:63076/place/for/${guestsQ}`
         try {
-            
+            const response = await axios(endpoint)
+            const data = response.data;
+            dispatch({
+                type: GET_GUESTS,
+                payload: data
+
+            })
         } catch (error) {
-            
+            console.log(error + "redux error")
         }
     }
 }
