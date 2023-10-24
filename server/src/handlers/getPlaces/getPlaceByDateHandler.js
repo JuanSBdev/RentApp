@@ -1,9 +1,9 @@
 const getPlacesByDateController = require("../../controllers/getPlaces/getPlacesByDateController");
 
 const getPlaceByDateHandler = async (req, res)=>{
-    let { dates } = req.params;
+    let { dateInit, dateFinish } = req.params;
     try {
-        let result = await getPlacesByDateController(dates)
+        let result = await getPlacesByDateController(dateInit, dateFinish)
         res.status(200).json(result)
     } catch (error) {
         res.status(400).json({errorDate: error.message})

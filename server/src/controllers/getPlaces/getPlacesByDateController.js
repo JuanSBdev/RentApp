@@ -1,11 +1,11 @@
 const {Place}= require('../../db')
 const {Op} = require('sequelize')
 
-const getPlacesByDateController = async (guests)=>{
+const getPlacesByDateController = async (dateInit, dateFinish)=>{
     let result = await Place.findAll({
         where:{
             unavailable_dates:{
-                [Op.overlap]:[initDate, finishDate]
+                [Op.overlap]:[dateInit, dateFinish]
             }
         }
     })

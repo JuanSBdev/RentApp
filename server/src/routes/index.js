@@ -11,7 +11,7 @@ const router = Router();
 router.use('/start', getPlaces )
 router.use('/place/in/:location', getPlaceByLocationHandler )
 router.use('/place/for/:guests', getPlaceByGuestsHandler )
-router.use('/place/for/:dates', getPlaceByDateHandler )
+router.use('/place/for/:dateInit/:dateFinish', getPlaceByDateHandler )
 router.use('/place/:id', getPlaceById )
 
 module.exports = router;
