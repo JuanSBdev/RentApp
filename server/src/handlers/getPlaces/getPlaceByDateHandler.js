@@ -1,4 +1,6 @@
-const getPlaceByDateHandler = async (dates)=>{
+const getPlacesByDateController = require("../../controllers/getPlaces/getPlacesByDateController");
+
+const getPlaceByDateHandler = async (req, res)=>{
     let { dates } = req.params;
     try {
         let result = await getPlacesByDateController(dates)
