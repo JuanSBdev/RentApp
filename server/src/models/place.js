@@ -47,7 +47,7 @@ module.exports = (sequelize) =>{
 
         },
         unavailable_dates: {
-            type: DataTypes.ARRAY(DataTypes.DATE),
+            type: DataTypes.ARRAY(DataTypes.DATEONLY),
             allowNull:true,
 
         },
