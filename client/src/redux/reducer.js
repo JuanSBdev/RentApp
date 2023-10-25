@@ -1,4 +1,4 @@
-import { GET_GUESTS, GET_NAME } from "./action_types"
+import { GET_DATE, GET_GUESTS, GET_NAME } from "./action_types"
 const initialState = {
     place: []
 }
@@ -11,10 +11,15 @@ const initialState = {
                 place: action.payload
             }
         case GET_GUESTS:
-            return{
-                ...state,
-                place:action.payload
-            }
+                return{
+                    ...state,
+                    place:action.payload
+                }
+        case GET_DATE:
+                return{
+                    ...state,
+                    place:action.payload
+                }
         default:
             return state
     }
