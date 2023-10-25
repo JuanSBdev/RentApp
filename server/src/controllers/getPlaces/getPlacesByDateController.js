@@ -7,10 +7,10 @@ const getPlacesByDateController = async (dateInit, dateFinish)=>{
     let result = await Place.findAll({
         where:{
             unavailable_dates:{
-                [Op.includes]: dateInit
+                [Op.contains]:[dateInit, dateFinish]
             }
         }
     })
-    return result.map(res=>res.name);
+    return result;
 }
 module.exports= getPlacesByDateController;
