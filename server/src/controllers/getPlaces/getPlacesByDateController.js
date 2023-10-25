@@ -7,7 +7,7 @@ const getPlacesByDateController = async (dateInit, dateFinish)=>{
     let result = await Place.findAll({
         where:{
             unavailable_dates:{
-                [Op.contains]:[dateInit, dateFinish]
+                [Op.overlap]:[dateInit, dateFinish]
             }
         }
     })
