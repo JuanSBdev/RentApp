@@ -36,7 +36,7 @@ export const getPlaceByGuest = (guestsQ)=>{
     }
 }
 
-const getPlaceByDate = async (dateInit, dateFinish)=>{
+export const getPlaceByDate = async (dateInit, dateFinish)=>{
     return async (dispatch)=>{
         let endpoint =  `http://localhost:63076/place/dates/?dateInit=${dateInit}&dateFinish=${dateFinish}`
         try {

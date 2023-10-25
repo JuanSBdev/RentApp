@@ -3,7 +3,6 @@ const {Op} = require('sequelize')
 
 const getPlacesByDateController = async (dateInit, dateFinish)=>{
     
-    // const excludedDates = [dateInit, dateFinish];
     let overlap = await Place.findAll({
         where:{
             unavailable_dates:{
