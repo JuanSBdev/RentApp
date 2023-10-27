@@ -58,7 +58,7 @@ let submitForm =(e)=>{
 
 
   return (
-    <div className= { `${Styles.wrapper} flex flex-col items-center justify-center w-screen h-screen` }  >
+    <div className= { `${Styles.wrapper} flex flex-col items-center justify-center w-screen h-screen ` }  >
        
         
         <form  className=" border border-[#259073] flex flex-col items-center bg-[#fcffee] rounded shadow-lg p-5 mt-0  lg:flex-row " action="">
