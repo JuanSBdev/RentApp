@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../../../dist/output.css'; // Ajusta la ruta según la ubicación de tu archivo CSS
+import Styles from './Carlos.module.css'
 
 
 
@@ -10,7 +11,7 @@ export default function Carlos() {
         
 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        <img class="rounded-t-lg" src="https://www.labrujula24.com/wp-content/uploads/2022/12/carlos-paz.jpg" alt="" />
+        <img class={`rounded-t-lg ${Styles.img_card}`} src="https://www.labrujula24.com/wp-content/uploads/2022/12/carlos-paz.jpg" alt="" />
     </a>
     <div class="p-5">
         <a href="#">

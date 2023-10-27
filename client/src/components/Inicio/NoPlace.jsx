@@ -7,7 +7,7 @@ import Carlos from './CarlosPaz+/Carlos';
 
 export default function NoPlace() {
   return (
-    <div className={`${Styles.wrapper} flex flex-row justify-around -mt-40 ` }>
+    <div className={`${Styles.wrapper} flex flex-col md:flex-row justify-around -mt-40  items-center ` }>
       <Capilla/>
       <Carlos/>
     </div>

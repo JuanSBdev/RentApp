@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../../../dist/output.css'; // Ajusta la ruta según la ubicación de tu archivo CSS
-
+import Styles from './Capilla.module.css'
 
 
 export default function Capilla() {
@@ -8,9 +8,9 @@ export default function Capilla() {
     <div>
 
         
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class=" mb-10 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        <img class="rounded-t-lg" src="https://www.voydeviaje.com.ar/resizer/6-koTns6uUvdPUIGT4njV_He6TM=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/QUBMPWQO2VEXRLCB5XTUTCHKYY.jpg" alt="" />
+        <img class={`rounded-t-lg ${Styles.img_card}`} src="https://www.voydeviaje.com.ar/resizer/6-koTns6uUvdPUIGT4njV_He6TM=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/QUBMPWQO2VEXRLCB5XTUTCHKYY.jpg" alt="" />
     </a>
     <div class="p-5">
         <a href="#">

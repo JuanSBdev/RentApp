@@ -14,9 +14,11 @@ export default function Start() {
   let places = useSelector(state => state.place)
     
   return (
-    
     <div className={Styles.wrapper}>
-        <StartTitle/>
+    { places.length < 1 && 
+      <StartTitle/>
+
+    }
         <div className={Styles.divForm}>
             <FormStart/> 
        </div>
