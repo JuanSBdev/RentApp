@@ -13,5 +13,7 @@ router.use(`/place/dates`, getPlaceByDateHandler )
 router.use('/place/in/:location', getPlaceByLocationHandler )
 router.use('/place/for/:guests', getPlaceByGuestsHandler )
 router.use('/place/:id', getPlaceById )
+router.use('/place/:location/:dateInit/:dateFinish/:guests',  )
+
 
 module.exports = router;
