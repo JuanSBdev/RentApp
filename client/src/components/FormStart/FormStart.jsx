@@ -38,7 +38,7 @@ let handleDate = ()=>{
 let submitForm =(e)=>{
   e.preventDefault()
   console.log(form.city + 'from form')
-  if(form.city && !form.dateFrom){
+  if(form.city ){
 
     console.log('dispatch from form byCity')
     dispatch(getPlaceByName(form.city))

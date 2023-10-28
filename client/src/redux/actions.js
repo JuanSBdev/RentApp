@@ -1,6 +1,25 @@
 import axios from 'axios'
-import  {GET_DATE, GET_GUESTS, GET_NAME} from './action_types'
+import  {GET_DATE, GET_FORM, GET_GUESTS, GET_NAME} from './action_types'
  
+
+export const getPlacesComplete = (place, dateInit, dateFinish, guests)=>{
+    return async (dispatch) =>{
+        let endpoint = `http://localhost:63076/place/:${place}/${dateInit}/${dateFinish}/${guests}`
+        try {
+            let response = axios(endpoint)
+            let date = response.data;
+            dispatch({
+                type: GET_FORM,
+                payload: date
+            })
+        } catch (error) {
+            console.log( "redux FORM error" + error)
+
+            
+        }
+    }
+}
+
 export const getPlaceByName = (placeName) =>{
     return async(dispatch) =>{
         let endpoint = `http://localhost:63076/place/in/${placeName}`
