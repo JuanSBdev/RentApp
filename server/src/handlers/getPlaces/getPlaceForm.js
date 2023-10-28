@@ -14,7 +14,10 @@ const getPlacesByGuestsController = require("../../controllers/getPlaces/getPlac
               placeLocation.id === placeDate.id && placeLocation.id === placeGuests.id
             ))
           );
+        if(combinedResults.length === 0){
 
+            res.status(200).json({message: 'no se encontraron alojamientos con estos datos'})
+        }
         res.status(200).json(combinedResults)
     } catch (error) {
         res.status(400).json({ error: error.message });
