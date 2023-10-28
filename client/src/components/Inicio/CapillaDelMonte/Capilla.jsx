@@ -18,11 +18,11 @@ export default function Capilla() {
 
         
 <div class=" mb-10 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-    <a href="#">
+    <a onClick={buscarEnCapilla}>
         <img class={`rounded-t-lg ${Styles.img_card}`} src="https://www.voydeviaje.com.ar/resizer/6-koTns6uUvdPUIGT4njV_He6TM=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/QUBMPWQO2VEXRLCB5XTUTCHKYY.jpg" alt="" />
     </a>
     <div class="p-5">
-        <a href="#">
+        <a onClick={buscarEnCapilla}>
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Temporada Capilla Del Monte 2023</h5>
         </a>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Encontrá tu alojamiento al mejor precio en Capilla Del Monte para esta temporada 2023</p>
