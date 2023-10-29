@@ -15,9 +15,9 @@ export default function Start() {
     
   return (
     <div className={Styles.wrapper}>
-    { places.length < 1 && 
-      <StartTitle/>
+    { places === 'undefined' || places.length < 1 && 
 
+<StartTitle/>
     }
         <div className={Styles.divForm}>
             <FormStart/> 

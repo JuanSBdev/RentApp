@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import Styles from './FormStart.module.css'
 import '../../../dist/output.css'; // Ajusta la ruta según la ubicación de tu archivo CSS
 import { useDispatch } from 'react-redux';
-import { getPlaceByDate, getPlaceByGuest, getPlaceByName } from '../../redux/actions';
+import { getPlaceByDate, getPlaceByGuest, getPlaceByName, getPlacesComplete } from '../../redux/actions';
+import { validateDispatch } from './validateDispatch';
 
 
 export default function FormStart() {
@@ -37,22 +38,15 @@ let handleDate = ()=>{
 }
 let submitForm =(e)=>{
   e.preventDefault()
-  console.log(form.city + 'from form')
-  if(form.city ){
+  // console.log(form.city + 'from form')
+  if(form.city && !form.dateFrom && !form.dateTo && !form.guests){
 
-    console.log('dispatch from form byCity')
     dispatch(getPlaceByName(form.city))
   }
-  if(form.guests){
-
-    console.log('dispatch from form byGuest')
-    dispatch(getPlaceByGuest(form.guests))
-  }
-  if(form.dateFrom && form.dateTo){
-    console.log('dispatch from form byDate')
-    dispatch(getPlaceByDate(form.dateFrom, form.dateTo))
-  }
-
+  else if(!form.city && form.dateFrom || form.dateTo && !form.guests) {  dispatch(getPlaceByDate(form.dateFrom, form.dateTo))}
+  else if(!form.city && !form.dateFrom && !form.dateTo && form.guests){  dispatch(getPlaceByGuest(form.guests))}
+  else  {dispatch( getPlacesComplete(form.city, form.dateFrom, form.dateTo, form.guests))}
+ 
   // window.scrollBy(0, 500);
 }
 
