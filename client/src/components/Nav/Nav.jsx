@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Styles from './Nav.module.css'
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Nav() {
-  const { loginWithRedirect, user } = useAuth0();
+  const { loginWithRedirect, user, isLoading} = useAuth0();
 
+  // if(!isLoading){
+  //   console.log(user)
+  // }
 
   return (
     <div className={Styles.wrapperNav}> 
@@ -46,12 +49,21 @@ export default function Nav() {
 
     </button>
     <ul tabIndex={1} className='menu menu-sm dropdown-content mx-0  z-[1]  shadow bg-base-100 rounded-box w-20 pl-5'>
+      {
+        !user ? (
         <button onClick={() => loginWithRedirect()}>
               <li className='my-2'>Log In</li>
         </button>
-        <a href=""> <li className='my-2'>Sign Up</li></a>
+
+        ):(
+          <button onClick={() => loginWithRedirect()}>
+          <li className='my-2'>Log Out</li>
+    </button>
+
+        )
+      }
+        {/* <a href=""> <li className='my-2'>Sign Up</li></a> */}
         <a href=""><li className='my-2'>FAQ</li></a>
-       
         
     </ul>
 
