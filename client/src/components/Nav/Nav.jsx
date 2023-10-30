@@ -1,8 +1,11 @@
 import React from 'react'
 import Styles from './Nav.module.css'
-
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Nav() {
+  const { loginWithRedirect } = useAuth0();
+
+
   return (
     <div className={Styles.wrapperNav}> 
        <div className="navbar ">
@@ -33,9 +36,9 @@ export default function Nav() {
         </svg>
     </button>
     <ul tabIndex={1} className='menu menu-sm dropdown-content mx-0  z-[1]  shadow bg-base-100 rounded-box w-20 pl-5'>
-        <a href="">
+        <button onClick={() => loginWithRedirect()}>
               <li className='my-2'>Log In</li>
-        </a>
+        </button>
         <a href=""> <li className='my-2'>Sign Up</li></a>
         <a href=""><li className='my-2'>FAQ</li></a>
        

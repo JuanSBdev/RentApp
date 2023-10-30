@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux'
 import NoPlace from '../../components/Inicio/NoPlace'
 
 
+
 export default function Start() {
 
   let places = useSelector(state => state.place)

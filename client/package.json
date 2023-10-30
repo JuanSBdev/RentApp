@@ -22,6 +22,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.2.1",
     "@heroicons/react": "^2.0.18",
     "axios": "^1.5.1",
     "ol": "^8.1.0",
