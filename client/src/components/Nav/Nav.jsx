@@ -3,11 +3,8 @@ import Styles from './Nav.module.css'
 import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Nav() {
-  const { loginWithRedirect, user, isLoading} = useAuth0();
+  const { loginWithRedirect, logout, user, isLoading} = useAuth0();
 
-  // if(!isLoading){
-  //   console.log(user)
-  // }
 
   return (
     <div className={Styles.wrapperNav}> 
@@ -56,9 +53,9 @@ export default function Nav() {
         </button>
 
         ):(
-          <button onClick={() => loginWithRedirect()}>
-          <li className='my-2'>Log Out</li>
-    </button>
+          <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+            <li className='my-2'>Log Out</li>
+          </button>
 
         )
       }
