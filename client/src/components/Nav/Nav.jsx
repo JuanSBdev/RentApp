@@ -45,22 +45,30 @@ export default function Nav() {
       }
 
     </button>
-    <ul tabIndex={1} className='menu menu-sm dropdown-content mx-0  z-[1]  shadow bg-base-100 rounded-box w-20 pl-5'>
+    <ul tabIndex={1} className='menu menu-sm dropdown-content mx-0  z-[1]  shadow bg-base-100 rounded-box w-40 -ml-12 pl-5'>
       {
         !user ? (
-        <button onClick={() => loginWithRedirect()}>
-              <li className='my-2'>Log In</li>
-        </button>
+          <li >
+                <button onClick={() => loginWithRedirect()}>
+                Log In
+                </button>
+          </li>
 
         ):(
-          <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-            <li className='my-2'>Log Out</li>
-          </button>
+          <li>
+              <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+                Log Out
+              </button>
+          </li>
 
         )
       }
-        {/* <a href=""> <li className='my-2'>Sign Up</li></a> */}
-        <a href=""><li className='my-2'>FAQ</li></a>
+
+        <li className='my-2'>
+          <button>
+            FAQ
+          </button>
+        </li>
         
     </ul>
 
