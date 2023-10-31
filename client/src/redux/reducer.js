@@ -1,4 +1,4 @@
-import { GET_DATE, GET_FORM, GET_GUESTS, GET_NAME } from "./action_types"
+import { GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, CHA_LA } from "./action_types"
 const initialState = {
     place: [],
     language: 'es'
