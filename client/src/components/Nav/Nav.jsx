@@ -1,9 +1,20 @@
 import React, { useEffect } from 'react'
 import Styles from './Nav.module.css'
 import { useAuth0 } from "@auth0/auth0-react";
+import { useDispatch, useSelector } from 'react-redux';
+import { changeLanguage } from '../../redux/actions';
 
 export default function Nav() {
   const { loginWithRedirect, logout, user, isLoading} = useAuth0();
+
+
+
+    let dispatch = useDispatch()
+    let lang = useSelector(state=> state.language)
+    let changeLang = (lang)=>{
+    dispatch(changeLanguage(`${lang}`))
+      console.log(lang)
+   }
 
 
   return (
@@ -14,11 +25,21 @@ export default function Nav() {
       <label tabIndex={0} className="btn btn-ghost btn-circle">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
       </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+
+      {lang === 'es' ? ( <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a>Quiero alojar</a></li>
+        <li><a>Contacto</a></li>
+        <li><a>¿Quienes somos?</a></li>
+      </ul>):(
+        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>Become a host.</a></li>
         <li><a>Contact Us</a></li>
         <li><a>About</a></li>
       </ul>
+      )
+       }
+      
+      
     </div>
   </div>
   <div className=" flex items-end navbar-center">
@@ -89,8 +110,8 @@ export default function Nav() {
           </svg>
         </button>
         <ul className='menu dropdown-content bg-base-100 z-[1] -ml-12  rounded-box'>
-          <li><button>Español</button></li>
-          <li><button>English</button></li>
+          <li><button onClick={()=>changeLang('es')} >Español</button></li>
+          <li><button onClick={()=>changeLang('en')}  >English</button></li>
         </ul>
     </div>
 </div>
