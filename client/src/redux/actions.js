@@ -1,7 +1,19 @@
 import axios from 'axios'
-import  {GET_DATE, GET_FORM, GET_GUESTS, GET_NAME} from './action_types'
+import  {CHA_LA, GET_DATE, GET_FORM, GET_GUESTS, GET_NAME} from './action_types'
  
-
+export const changeLanguage = (lang)=>{
+    return async(dispatch)=>{
+        try {
+            dispatch({
+                type: CHA_LA,
+                payload: lang
+            })
+            
+        } catch (error) {
+            console.log( "redux LANGUAGE error" + error)
+        }
+    }
+}
 export const getPlacesComplete = (place, dateInit, dateFinish, guests)=>{
     return async (dispatch) =>{
         let endpoint = `http://localhost:63076/place/${place}/${dateInit}/${dateFinish}/${guests}`

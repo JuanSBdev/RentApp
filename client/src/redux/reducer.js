@@ -1,10 +1,16 @@
 import { GET_DATE, GET_FORM, GET_GUESTS, GET_NAME } from "./action_types"
 const initialState = {
-    place: []
+    place: [],
+    language: 'es'
 }
 
  const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case CHA_LA:
+            return{
+                ...state,
+                language: action.payload
+            }
         case GET_FORM:
             return{
                 ...state,
@@ -26,6 +32,7 @@ const initialState = {
                     ...state,
                     place:action.payload
                 }
+
         default:
             return state
     }

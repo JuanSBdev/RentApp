@@ -1,3 +1,4 @@
+export const CHA_LA = "CHANGE_LANGUAGE"
 export const GET_FORM = "GET_BY_ALL_FORM"
 export const GET_NAME = "GET_BY_NAME"
 export const GET_GUESTS = "GET_BY_GUESTS"
