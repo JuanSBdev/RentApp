@@ -9,6 +9,8 @@ import { validateDispatch } from './validateDispatch';
 export default function FormStart() {
   let dispatch = useDispatch()
   let lang = useSelector(state=> state.language)
+
+  const [inputType, setInputType] = useState('text');
   
   let [form, setForm] = useState({
     city: "capilla",
@@ -105,8 +107,12 @@ return (
            </div>
            <div className="m-1">
 
-             <label className="font-semibold text-xs mt-3 m-0 lg:ml-5"  htmlFor="passwordField">To</           label>
-             <input onChange={handleForm} type="date" name='dateTo' id="dateInput" className="flex items-center h-12 px-4 w-34 bg-gray-200 ml-0 mt-2  rounded focus:outline-none focus:ring-2 lg:ml-5"/>
+             <label className="font-semibold text-xs mt-3 m-0 lg:ml-5"  htmlFor="passwordField">To</label>
+             <input onChange={handleForm}
+            //   type={inputType} onClick={()=>setInputType('date')}
+            //  onBlur={()=>setInputType('text')}
+             type='date'
+             placeholder='dd-mm-yyyy' name='dateTo' id="dateInput" className="flex items-center h-12 px-4 w-34 bg-gray-200 ml-0 mt-2  rounded focus:outline-none focus:ring-2 lg:ml-5"/>
 
            </div>
            <div className="m-1">
