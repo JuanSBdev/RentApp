@@ -3,6 +3,7 @@ const {DB_DIALECT, DB_USER,DB_PASSWORD,DB_HOST,DB_NAME } =  process.env
 const {Sequelize} = require ('sequelize')
 
 const placeModel = require('./models/place')
+const userModel = require('./models/user')
 
 
 const sequelize = new Sequelize(`${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
@@ -13,8 +14,9 @@ const sequelize = new Sequelize(`${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_
 
 
 placeModel(sequelize)
+userModel(sequelize)
 
-const { Place } = sequelize.models
+const { Place, User } = sequelize.models
 
 module.exports = {...sequelize.models,
     conn:sequelize}
