@@ -6,15 +6,20 @@ const getPlaceByLocationHandler = require('../handlers/getPlaces/getPlaceByLocat
 const getPlaceByGuestsHandler = require('../handlers/getPlaces/getPlaceByGuestsHandler');
 const getPlaceByDateHandler = require('../handlers/getPlaces/getPlaceByDateHandler');
 const getPlaceForm = require('../handlers/getPlaces/getPlaceForm');
+const createUserHandler = require('../handlers/Users/createUserHandler');
+const userRouter = require('./userRouter');
 
 
 const router = Router();
-router.use('/start', getPlaces )
-router.use(`/place/dates/:dateInit/:dateFinish`, getPlaceByDateHandler )
-router.use('/place/in/:location', getPlaceByLocationHandler )
-router.use('/place/for/:guests', getPlaceByGuestsHandler )
-router.use('/place/:location/:dateInit/:dateFinish/:guests',  getPlaceForm)
-router.use('/place/:id', getPlaceById )
+
+router.get('/start', getPlaces )
+router.get(`/place/dates/:dateInit/:dateFinish`, getPlaceByDateHandler )
+router.get('/place/in/:location', getPlaceByLocationHandler )
+router.get('/place/for/:guests', getPlaceByGuestsHandler )
+router.get('/place/:location/:dateInit/:dateFinish/:guests',  getPlaceForm)
+router.get('/place/:id', getPlaceById )
+router.use('/user', userRouter )
+
 
 
 module.exports = router;
