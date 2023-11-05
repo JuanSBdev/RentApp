@@ -1,6 +1,8 @@
 import axios from 'axios'
 import  {CHA_LA, GET_DATE, GET_FORM, GET_GUESTS, GET_NAME} from './action_types'
- 
+
+const URL = 'http://localhost:63076'
+
 export const changeLanguage = (lang)=>{
     return async(dispatch)=>{
         try {
@@ -79,6 +81,22 @@ export const getPlaceByDate = (dateInit, dateFinish)=>{
             })
         } catch (error) {
             console.log("redux error get_date" + error )
+
+        }
+    }
+}
+export const getAllPlaces = ()=>{
+    return async (dispatch)=>{
+        let endpoint =  `${URL}/start`
+        try {
+            let response = await axios(endpoint);
+            let data = response.data;
+            dispatch({
+                type: GET_ALL,
+                payload: data
+            })
+        } catch (error) {
+            console.log("redux error get_all" + error )
 
         }
     }

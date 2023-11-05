@@ -1,4 +1,4 @@
-import { GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, CHA_LA } from "./action_types"
+import { GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, CHA_LA, GET_ALL } from "./action_types"
 const initialState = {
     place: [],
     language: 'es'
@@ -6,6 +6,10 @@ const initialState = {
 
  const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case GET_ALL:
+            return{
+                ...state,
+            }
         case CHA_LA:
             return{
                 ...state,
