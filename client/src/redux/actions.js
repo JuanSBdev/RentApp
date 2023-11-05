@@ -1,5 +1,5 @@
 import axios from 'axios'
-import  {CHA_LA, GET_DATE, GET_FORM, GET_GUESTS, GET_NAME} from './action_types'
+import  {CHA_LA, GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, POST_USER} from './action_types'
 
 const URL = 'http://localhost:63076'
 
@@ -93,6 +93,25 @@ export const getAllPlaces = ()=>{
             let data = response.data;
             dispatch({
                 type: GET_ALL,
+                payload: data
+            })
+        } catch (error) {
+            console.log("redux error get_all" + error )
+
+        }
+    }
+}
+
+// user
+
+export const postUser = (user)=>{
+    return async (dispatch)=>{
+        let endpoint =  `${URL}/user`
+        try {
+            let response = await axios.post(endpoint, user);
+            let data = response.data;
+            dispatch({
+                type: POST_USER,
                 payload: data
             })
         } catch (error) {
