@@ -11,6 +11,7 @@ const userRouter = require('./userRouter');
 
 
 const router = Router();
+// server.get('/', (req, res)=> getPlaces(req, res))
 
 router.get('/start', getPlaces )
 router.get(`/place/dates/:dateInit/:dateFinish`, getPlaceByDateHandler )
@@ -18,7 +19,8 @@ router.get('/place/in/:location', getPlaceByLocationHandler )
 router.get('/place/for/:guests', getPlaceByGuestsHandler )
 router.get('/place/:location/:dateInit/:dateFinish/:guests',  getPlaceForm)
 router.get('/place/:id', getPlaceById )
-router.use('/user', userRouter )
+// router.use('/user', userRouter )
+router.post('/user', createUserHandler )
 
 
 
