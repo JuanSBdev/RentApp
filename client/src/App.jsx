@@ -5,6 +5,7 @@ import './App.css'
 import Nav from './components/Nav/Nav'
 import Start from './views/Start/Start'
 import Footer from './components/Footer/Footer'
+import {Routes, Route} from "react-router-dom"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,10 @@ function App() {
     <div className="wrapperApp">
 
       <Nav/>
-      <Start />
+    <Routes>
+      <Route exact path='/' component={Start} />
+
+    </Routes>
       <Footer/>
     </div>
   )
