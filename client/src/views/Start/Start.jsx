@@ -22,7 +22,7 @@ useEffect(()=>{
 },[])
 useEffect(()=>{
   dispatch(postUser(user))
-},[isLoading])
+},[user])
 
 
 
