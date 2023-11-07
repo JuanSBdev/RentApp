@@ -15,7 +15,7 @@ function App() {
 
       <Nav/>
     <Routes>
-      <Route exact path='/' component={Start} />
+      <Route path='/' Component={Start} />
 
     </Routes>
       <Footer/>

@@ -46,7 +46,7 @@ let submitForm =(e)=>{
     dispatch(getPlaceByName(form.city))
   }
   else if(!form.city && form.dateFrom || form.dateTo && !form.guests) {  dispatch(getPlaceByDate(form.dateFrom, form.dateTo))}
-  else if(!form.city && !form.dateFrom && !form.dateTo && form.guests){  dispatch(getPlaceByGuest(form.guests))}
+  else if(form.city && !form.dateFrom && !form.dateTo && form.guests){  dispatch(getPlaceByGuest(form.guests))}
   else  {dispatch( getPlacesComplete(form.city, form.dateFrom, form.dateTo, form.guests))}
  
   // window.scrollBy(0, 500);
