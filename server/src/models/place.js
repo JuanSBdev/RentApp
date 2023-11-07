@@ -52,7 +52,7 @@ module.exports = (sequelize) =>{
 
         },
         max_occupancy_per_room:{
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull:true,
         },
         number_of_rooms:{
