@@ -111,9 +111,8 @@ export const postUser = (user)=>{
             mail: user.email,
             isAdmin: user.isAdmin
         }
-
+console.log(user)
         try {
-             console.log(postData)
             let response = await axios.post(endpoint, postData);
             let data = response.data;
             dispatch({
