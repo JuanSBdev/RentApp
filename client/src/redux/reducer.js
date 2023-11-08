@@ -1,6 +1,7 @@
-import { GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, CHA_LA, GET_ALL } from "./action_types"
+import { GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, CHA_LA, GET_ALL, GET_DET } from "./action_types"
 const initialState = {
     place: [],
+    detail: [],
     language: 'es'
 }
 
@@ -36,6 +37,11 @@ const initialState = {
                     ...state,
                     place:action.payload
                 }
+        case GET_DET:
+            return{
+                ...state,
+                detail:action.payload
+            }
 
         default:
             return state

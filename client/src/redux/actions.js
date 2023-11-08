@@ -1,5 +1,5 @@
 import axios from 'axios'
-import  {CHA_LA, GET_ALL, GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, POST_USER} from './action_types'
+import  {CHA_LA, GET_ALL, GET_DATE, GET_DET, GET_FORM, GET_GUESTS, GET_NAME, POST_USER} from './action_types'
 
 const URL = 'http://localhost:63076'
 
@@ -18,7 +18,7 @@ export const changeLanguage = (lang)=>{
 }
 export const getPlacesComplete = (place, dateInit, dateFinish, guests)=>{
     return async (dispatch) =>{
-        let endpoint = `http://localhost:63076/place/${place}/${dateInit}/${dateFinish}/${guests}`
+        let endpoint = `${URL}/place/${place}/${dateInit}/${dateFinish}/${guests}`
         try {
             let response = await axios(endpoint)
             let data = response.data;
@@ -36,7 +36,7 @@ export const getPlacesComplete = (place, dateInit, dateFinish, guests)=>{
 
 export const getPlaceByName = (placeName) =>{
     return async(dispatch) =>{
-        let endpoint = `http://localhost:63076/place/in/${placeName}`
+        let endpoint = `${URL}/place/in/${placeName}`
         try {
             const response = await axios.get(endpoint)
             const data = response.data;
@@ -54,7 +54,7 @@ export const getPlaceByName = (placeName) =>{
 
 export const getPlaceByGuest = (guestsQ)=>{
     return async (dispatch)=>{
-        let endpoint = `http://localhost:63076/place/for/${guestsQ}`
+        let endpoint = `${URL}/place/for/${guestsQ}`
         try {
             const response = await axios(endpoint)
             const data = response.data;
@@ -71,7 +71,7 @@ export const getPlaceByGuest = (guestsQ)=>{
 
 export const getPlaceByDate = (dateInit, dateFinish)=>{
     return async (dispatch)=>{
-        let endpoint =  `http://localhost:63076/place/dates/?dateInit=${dateInit}&dateFinish=${dateFinish}`
+        let endpoint =  `${URL}/place/dates/?dateInit=${dateInit}&dateFinish=${dateFinish}`
         try {
             let response = await axios(endpoint);
             let data = response.data;
@@ -111,7 +111,6 @@ export const postUser = (user)=>{
             mail: user.email,
             isAdmin: user.isAdmin
         }
-console.log(user)
         try {
             let response = await axios.post(endpoint, postData);
             let data = response.data;
@@ -122,6 +121,22 @@ console.log(user)
         } catch (error) {
             console.log("redux error postUser" + error )
 
+        }
+    }
+}
+
+export const getDetail = (id)=>{
+    return  async (dispatch)=>{
+        try {
+            
+            let response = await axios(`${URL}/${id}`)
+            let data = response.data
+            dispatch({
+                type: GET_DET,
+                payload: data
+            })
+        } catch (error) {
+            console.log("redux error getDetail" + error )
         }
     }
 }
