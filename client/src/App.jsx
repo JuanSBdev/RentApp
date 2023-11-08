@@ -6,6 +6,7 @@ import Nav from './components/Nav/Nav'
 import Start from './views/Start/Start'
 import Footer from './components/Footer/Footer'
 import {Routes, Route} from "react-router-dom"
+import Detail from './views/Detail/Detail'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <Nav/>
     <Routes>
       <Route path='/' Component={Start} />
+      <Route path='/details' Component={Detail} />
 
     </Routes>
       <Footer/>

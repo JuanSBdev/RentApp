@@ -10,6 +10,7 @@ export default function PlaceView() {
         <div className={Styles.wrapper}>{
           places.map((place, index) => (
             <Places key={index}
+            id={place.id}
             max_occupancy_per_room={place.max_occupancy_per_room}
             type={place.type}
             name={place.name}
