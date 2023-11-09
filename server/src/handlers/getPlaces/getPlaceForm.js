@@ -4,7 +4,7 @@ const getPlacesByGuestsController = require("../../controllers/getPlaces/getPlac
 
  let getPlaceForm = async  (req, res)=>{
     let { location, dateInit, dateFinish, guests } = req.params
-    console.log({"locat": location, "d":dateInit, dateFinish, "gue": guests})
+  
     try {
         let resultLocation = await getPlaceByLocationController(location)
         let resultDate = await getPlacesByDateController(dateInit, dateFinish)
@@ -14,12 +14,15 @@ const getPlacesByGuestsController = require("../../controllers/getPlaces/getPlac
             resultDate.some(placeDate => resultGuests.some(placeGuests =>
               placeLocation.id === placeDate.id && placeLocation.id === placeGuests.id
             ))
-          );
-        if(combinedResults.length === 0){
-
+            );
+            console.log(typeof combinedResults)
+        if(Object.keys(combinedResults).length === 0){
             res.status(200).json({message: 'no se encontraron alojamientos con estos datos'})
         }
-        res.status(200).json(combinedResults)
+        else{
+
+          res.status(200).json(combinedResults)
+        }
     } catch (error) {
         res.status(400).json( error);
     }

@@ -13,7 +13,6 @@ const {Op} = require ('sequelize')
                 }
             }
         });
-        console.log(typeof guests)
     return placeFound;
 }
 

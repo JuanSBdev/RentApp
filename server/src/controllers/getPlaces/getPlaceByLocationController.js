@@ -10,7 +10,6 @@ const getPlaceByLocationController = async (location)=>{
  },
 }
  )
-console.log(location)
  return placeFound;
 }
 module.exports = getPlaceByLocationController;
