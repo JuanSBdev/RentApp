@@ -128,8 +128,8 @@ export const postUser = (user)=>{
 export const getDetail = (id)=>{
     return  async (dispatch)=>{
         try {
-            
-            let response = await axios(`${URL}/${id}`)
+            console.log('disp'+ id)
+            let response = await axios(`${URL}/place/${id}`)
             let data = response.data
             dispatch({
                 type: GET_DET,

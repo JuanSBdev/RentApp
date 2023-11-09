@@ -17,7 +17,7 @@ function App() {
       <Nav/>
     <Routes>
       <Route path='/' Component={Start} />
-      <Route path='/details' Component={Detail} />
+      <Route path='/details/:id' Component={Detail} />
 
     </Routes>
       <Footer/>
