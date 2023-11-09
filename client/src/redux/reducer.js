@@ -40,7 +40,7 @@ const initialState = {
         case GET_DET:
             return{
                 ...state,
-                detail:action.payload
+                detail: [action.payload]
             }
 
         default:
