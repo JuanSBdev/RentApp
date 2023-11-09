@@ -4,10 +4,11 @@ const getPlacesByGuestsController = require("../../controllers/getPlaces/getPlac
 
  let getPlaceForm = async  (req, res)=>{
     let { location, dateInit, dateFinish, guests } = req.params
+    console.log({"locat": location, "d":dateInit, dateFinish, "gue": guests})
     try {
         let resultLocation = await getPlaceByLocationController(location)
         let resultDate = await getPlacesByDateController(dateInit, dateFinish)
-        let resultGuests = await getPlacesByGuestsController(guests)
+        let resultGuests = await getPlacesByGuestsController(location, guests)
 
         const combinedResults = resultLocation.filter(placeLocation =>
             resultDate.some(placeDate => resultGuests.some(placeGuests =>
@@ -20,7 +21,8 @@ const getPlacesByGuestsController = require("../../controllers/getPlaces/getPlac
         }
         res.status(200).json(combinedResults)
     } catch (error) {
-        res.status(400).json({ error: error.message });
+        res.status(400).json( error);
     }
 }
 module.exports = getPlaceForm;
+// { error: error.message },

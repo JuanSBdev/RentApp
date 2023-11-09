@@ -26,7 +26,7 @@ let getPlaces = async (req, res)=>{
             createdPlaces.push(place.toJSON()); // Agregar el lugar a la lista de lugares creados o encontrados
         }
 
-        res.status(200).json({message:'Lugares encontrados y actualizados'});
+        res.status(200).json({message:'PLaces updated from Server'});
 
         // const place = data.map(placeX =>{
         //     return({

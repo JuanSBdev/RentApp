@@ -82,7 +82,7 @@
       "services": ["Spa", "Tennis Court"],
       "unavailable_dates": ["2023-01-01", "2023-01-02"],
       "max_occupancy_per_room": 4,
-      "number_of rooms": 40
+      "number_of_rooms": 40
     },
     {
       "id": 8,
