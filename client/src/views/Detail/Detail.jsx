@@ -3,6 +3,7 @@ import { getDetail } from '../../redux/actions'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import Places from '../../components/places/Places'
+import styles from './Detail.module.css'
 
 export default function Detail() {
   let dispatch = useDispatch()
@@ -13,7 +14,7 @@ export default function Detail() {
 
   let places = useSelector(state => state.detail)
   return (
-    <div >
+    <div className={styles.wrapper} >
     { places.map((place, index) => (
             <Places key={index}
             id={place.id}
