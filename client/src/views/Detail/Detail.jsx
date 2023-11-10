@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import Places from '../../components/places/Places'
 import styles from './Detail.module.css'
-import SliderTss from '../../components/Detail/Slider/SliderTss'
+import SliderTss from '../../components/Detail/SliderTws'
 import DetailCard from '../../components/Detail/DetailCard'
 
 export default function Detail() {

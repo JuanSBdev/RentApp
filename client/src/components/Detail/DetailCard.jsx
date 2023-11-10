@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './DetailCard.module.css'
-import SliderTss from './Slider/SliderTss'
+import SliderTss from './SliderTws'
 export default function DetailCard() {
   return (
     <div>
