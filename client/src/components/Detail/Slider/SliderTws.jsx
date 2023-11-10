@@ -2,8 +2,9 @@ import { Carousel, IconButton } from "@material-tailwind/react";
  
 export default function SlidertWS() {
   return (
-    <Carousel
-      className="rounded-xl"
+    <Carousel 
+    height="70%"
+      className="rounded-xl  "
       prevArrow={({ handlePrev }) => (
         <IconButton
           variant="text"
