@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import Places from '../../components/places/Places'
 import styles from './Detail.module.css'
+import SliderTss from '../../components/Detail/Slider/SliderTss'
 
 export default function Detail() {
   let dispatch = useDispatch()
@@ -15,7 +16,7 @@ export default function Detail() {
   let places = useSelector(state => state.detail)
   return (
     <div className={styles.wrapper} >
-      <div className={styles.placeCard}>
+      {/* <div className={styles.placeCard}>
 
     { places.map((place, index) => (
       <Places key={index}
@@ -29,7 +30,8 @@ export default function Detail() {
       
       />
       ))}
-      </div>
+      </div> */}
+      <SliderTss/>
 
     </div>
   )
