@@ -1,5 +1,8 @@
 .wrapper{
     width: 100%;
     display: flex;
-    justify-content: center;
+}
+.placeCard{
+    align-items: start;
+    width: 20%;
 }
