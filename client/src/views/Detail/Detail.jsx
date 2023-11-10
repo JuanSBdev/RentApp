@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Places from '../../components/places/Places'
 import styles from './Detail.module.css'
 import SliderTss from '../../components/Detail/Slider/SliderTss'
+import DetailCard from '../../components/Detail/DetailCard'
 
 export default function Detail() {
   let dispatch = useDispatch()
@@ -31,7 +32,8 @@ export default function Detail() {
       />
       ))}
       </div> */}
-      <SliderTss/>
+      
+      <DetailCard/>
 
     </div>
   )
