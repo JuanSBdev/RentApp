@@ -27,7 +27,7 @@ export default function Footer() {
                   placeholder="Email"
                   required=""
                   type="email"
-                  className="flex-grow w-full h-12 px-4 mb-3 text-black transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
+                  className="flex-grow w-full h-12 px-4 mb-3 text-black transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0  focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
                 />
                         <a href="/"
                             className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-[#e2d9c2] transition duration-200 rounded shadow-md md:w-auto  bg-[#259073] hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none">
@@ -62,7 +62,7 @@ export default function Footer() {
               placeholder="Email"
               required=""
               type="text"
-              className="flex-grow w-full h-12 px-4 mb-3 text-black transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
+              className="flex-grow w-full h-12 px-4 mb-3 text-black transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0  focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
             />
                     <a href="/"
                         className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-[#e2d9c2] transition duration-200 rounded shadow-md md:w-auto  bg-[#259073] hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none">
