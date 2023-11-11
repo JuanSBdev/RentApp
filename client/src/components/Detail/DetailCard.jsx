@@ -3,7 +3,7 @@ import styles from './DetailCard.module.css'
 import SliderTss from './Slider/SliderTws'
 export default function DetailCard() {
   return (
-    <div className='w-9/12 pt-5   '>
+    <div className='w-9/12 pt-4 '>
         <SliderTss/>
     </div>
   )
