@@ -23,7 +23,7 @@ export default function Detail() {
     <div className={`${styles.wrapper} flex flex-col align-center `} >
       <DetailCard/>
         <FormA/>
-      <div className="prices flex items-center justify-center w-100 b-1 ">
+      <div className="prices flex items-center justify-center w-100 	border-solid border-2 border-indigo-600  ">
         <Options/>
       </div>
 
