@@ -16,15 +16,15 @@ import {
           <Typography variant="h5" color="blue-gray" className="mb-2">
             Info
           </Typography>
-          <Typography variant="p">
+          <Typography variant="paragraph">
             The place is close to Barceloneta Beach and bus stop just 2 min by
             walk and near to &quot;Naviglio&quot; where you can enjoy the main
             night life in Barcelona.
           </Typography>
-          {place && <Typography variant="p">
+          {place && <Typography variant="paragraph">
             Price per night {place.price_per_night}$
           </Typography>}
-          <Typography variant="p">
+          <Typography variant="paragraph">
             Services: Wi-fi, garage, breackfast, bedrooms, private bath, room service
           </Typography>
         </CardBody>
