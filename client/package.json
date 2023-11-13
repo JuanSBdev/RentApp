@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite && npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "concurrently \"vite\" \"npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch\"",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -26,6 +26,7 @@
     "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "^2.1.4",
     "axios": "^1.5.1",
+    "concurrently": "^8.2.2",
     "ol": "^8.1.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.3",

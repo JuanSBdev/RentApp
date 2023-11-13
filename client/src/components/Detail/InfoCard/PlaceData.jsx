@@ -10,7 +10,7 @@ import {
   export default function PlaceData() {
     let place = useSelector(state => state.detail[0])
     return (
-      <Card className="mt-6 w-96">
+      <Card className="mt-2 sm:w-4/5">
        
         <CardBody>
           <Typography variant="h5" color="blue-gray" className="mb-2">
@@ -25,7 +25,7 @@ import {
             Price per night {place.price_per_night}$
           </Typography>}
           <Typography variant="paragraph">
-            Services: Wi-fi, garage, breackfast, bedrooms, private bath, room service
+            Services: Wi-fi, garage, breackfast, x bedrooms, private bath, room service
           </Typography>
         </CardBody>
         
