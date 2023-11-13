@@ -7,6 +7,7 @@ import styles from './Detail.module.css'
 import SliderTss from '../../components/Detail/Slider/SliderTws'
 import DetailCard from '../../components/Detail/DetailCard'
 import FormA from '../../components/Detail/price/Form'
+import Options from '../../components/Detail/price/Options'
 
 export default function Detail() {
 
@@ -22,7 +23,8 @@ export default function Detail() {
     <div className={`${styles.wrapper} flex flex-col align-center `} >
       <DetailCard/>
         <FormA/>
-      <div className="prices ">
+      <div className="prices flex items-center justify-center w-100 b-1 ">
+        <Options/>
       </div>
 
     </div>
