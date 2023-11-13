@@ -43,7 +43,7 @@ export default function Nav() {
     </div>
   </div>
   <div className=" flex items-end navbar-center">
-    <a className=" normal-case text-xl text-[#fff]">Kirá
+    <a href='/' className=" normal-case text-xl text-[#fff]">Kirá
     </a>
     <p className="text-[black] text-l ml-2" >Alquiler</p>
   </div>

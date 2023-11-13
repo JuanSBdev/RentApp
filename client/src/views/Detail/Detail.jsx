@@ -6,6 +6,7 @@ import Places from '../../components/places/Places'
 import styles from './Detail.module.css'
 import SliderTss from '../../components/Detail/Slider/SliderTws'
 import DetailCard from '../../components/Detail/DetailCard'
+import FormA from '../../components/Detail/price/Form'
 
 export default function Detail() {
 
@@ -18,10 +19,11 @@ export default function Detail() {
 
   let places = useSelector(state => state.detail[0])
   return (
-    <div className={`${styles.wrapper} flex justify-center align-center `} >
-
-      
+    <div className={`${styles.wrapper} flex flex-col align-center `} >
       <DetailCard/>
+        <FormA/>
+      <div className="prices ">
+      </div>
 
     </div>
   )

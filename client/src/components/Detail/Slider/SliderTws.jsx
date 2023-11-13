@@ -4,7 +4,7 @@ export default function SlidertWS() {
   return (
 
     <Carousel 
-      className="rounded-xl sm:w-3/5"
+      className="rounded-xl sm:w-3/5 overflow-hidden"
       prevArrow={({ handlePrev }) => (
         <IconButton
         variant="text"
