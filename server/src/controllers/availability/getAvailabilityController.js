@@ -3,9 +3,9 @@ let {Place} = require('../../db')
 let getAvailabilityController = async (placeId, dateInit, dateEnd, guests)=>{
     let result = await Place.findAll({
         where:{
-            id: placeId,
+            
             number_of_rooms: {
-                [Op.gt]: 1
+                [Op.gt]: "1"
             },
             max_occupancy_per_room:{
                 [Op.gte]: Number(guests)
