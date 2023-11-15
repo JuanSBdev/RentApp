@@ -8,7 +8,7 @@
       "price_per_night": 120.0,
       "rating": 4.5,
       "services": ["Swimming Pool", "Restaurant", "Free Wi-Fi"],
-      "unavailable_dates": ["2023-01-01", "2023-01-02"],
+      "unavailable_dates": ["2023-01-01", "2023-01-02", "2023-01-03", "2023-01-04"],
       "max_occupancy_per_room": 2,
       "number_of_rooms": 50
     },
@@ -80,7 +80,7 @@
       "price_per_night": 150.0,
       "rating": 4.6,
       "services": ["Spa", "Tennis Court"],
-      "unavailable_dates": ["2023-01-01", "2023-01-02"],
+      "unavailable_dates": ["2023-01-06", "2023-01-08"],
       "max_occupancy_per_room": 4,
       "number_of_rooms": 40
     },

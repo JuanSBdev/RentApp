@@ -8,7 +8,7 @@ const getPlaces = require('./src/handlers/getPlaces/getPlaces')
 conn.sync({force: true})
 .then(
     ()=>{
-        // getPlaces()
+        getPlaces()
 
         const server = app.listen(port, ()=>{
             console.log('listening on port '+ server.address().port)
