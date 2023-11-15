@@ -14,7 +14,7 @@ const getPlacesByDateController = async (dateInit, dateFinish)=>{
     let notOverlap = all.filter(place => {
         return !overlap.some(o => o.id === place.id)
     })
-
     return notOverlap;
+
 }
 module.exports= getPlacesByDateController;
