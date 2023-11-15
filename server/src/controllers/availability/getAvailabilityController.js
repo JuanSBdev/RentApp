@@ -3,7 +3,7 @@ let {Place} = require('../../db')
 let getAvailabilityController = async (placeId, dateInit, dateEnd, guests)=>{
     let result = await Place.findAll({
         where:{
-            
+            id: placeId,
             number_of_rooms: {
                 [Op.gt]: "1"
             },
