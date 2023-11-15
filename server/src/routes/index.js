@@ -20,7 +20,7 @@ router.get(`/place/dates/:dateInit/:dateFinish`, getPlaceByDateHandler )
 router.get('/place/in/:location', getPlaceByLocationHandler )
 router.get('/place/for/:location/:guests', getPlaceByGuestsHandler )
 router.get('/place/:id', getPlaceById )
-router.get('/place/availability', getAvailabilityHandler )
+router.get('/availability', getAvailabilityHandler )
 // router.use('/user', userRouter )
 router.post('/user', createUserHandler )
 
