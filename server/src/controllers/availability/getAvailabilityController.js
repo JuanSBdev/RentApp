@@ -18,7 +18,7 @@ let getAvailabilityController = async (placeId, dateInit, dateEnd, guests)=>{
             }
         }
     })
-    console.log(dateInit, dateEnd)
+    console.log(result[0].price_per_night)
     return result
 }
 module.exports = getAvailabilityController;
