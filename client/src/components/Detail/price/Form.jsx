@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 
 import { useDispatch, useSelector } from 'react-redux';
-import Options from './Options';
 
 
 
@@ -40,13 +39,21 @@ let handleDate = ()=>{
 let submitForm =(e)=>{
   e.preventDefault()
   // console.log(form.city + 'from form')
-  if(form.city && !form.dateFrom && !form.dateTo && !form.guests){
-
-    dispatch(getPlaceByName(form.city))
+  if(!form.dateFrom && !form.dateTo && !form.guests){
+      alert('Faltan datos')
   }
-  else if(!form.city && form.dateFrom || form.dateTo && !form.guests) {  dispatch(getPlaceByDate(form.dateFrom, form.dateTo))}
-  else if(form.city && !form.dateFrom && !form.dateTo && form.guests){  dispatch(getPlaceByGuest(form.guests))}
-  else  {dispatch( getPlacesComplete(form.city, form.dateFrom, form.dateTo, form.guests))}
+  else if(form.dateFrom && form.dateTo && !form.guests) {
+    alert('Faltan datos')
+  }
+  else if(!form.dateFrom && !form.dateTo && form.guests){    alert('Faltan datos')
+  }
+  else if(!form.dateFrom && form.dateTo && form.guests){    alert('Faltan datos')
+  }
+  else if(form.dateFrom && !form.dateTo && form.guests){    alert('Faltan datos')
+  }
+  else  {
+    dispatch( getPlacesComplete(form.city, form.dateFrom, form.dateTo, form.guests))
+  }
  
   // window.scrollBy(0, 500);
 }

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import  {CHA_LA, GET_ALL, GET_DATE, GET_DET, GET_FORM, GET_GUESTS, GET_NAME, POST_USER} from './action_types'
+import  {GET_AB, CHA_LA, GET_ALL, GET_DATE, GET_DET, GET_FORM, GET_GUESTS, GET_NAME, POST_USER} from './action_types'
 
 const URL = 'http://localhost:63076'
 
@@ -9,6 +9,22 @@ export const changeLanguage = (lang)=>{
             dispatch({
                 type: CHA_LA,
                 payload: lang
+            })
+            
+        } catch (error) {
+            console.log( "redux LANGUAGE error" + error)
+        }
+    }
+}
+
+export const getAvailability = async (id, dateInit, dateEnd, guests)=>{
+    return async(dispatch)=>{
+        try {
+            let response = axios(`${URL}/availability`)
+            let data = response.data
+            dispatch({
+                type: GET_AB,
+                payload: data
             })
             
         } catch (error) {

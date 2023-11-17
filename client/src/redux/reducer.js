@@ -1,7 +1,8 @@
-import { GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, CHA_LA, GET_ALL, GET_DET } from "./action_types"
+import {GET_AB, GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, CHA_LA, GET_ALL, GET_DET } from "./action_types"
 const initialState = {
     place: [],
     detail: [],
+    aviability:[],
     language: 'es'
 }
 
@@ -10,6 +11,11 @@ const initialState = {
         case GET_ALL:
             return{
                 ...state,
+            }
+        case GET_AB:
+            return{
+                ...state,
+                aviability:action.payload.price
             }
         case CHA_LA:
             return{
