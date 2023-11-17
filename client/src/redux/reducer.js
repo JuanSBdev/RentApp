@@ -15,7 +15,7 @@ const initialState = {
         case GET_AB:
             return{
                 ...state,
-                availability:action.payload.price
+                availability:action.payload
             }
         case CHA_LA:
             return{
