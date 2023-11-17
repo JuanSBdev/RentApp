@@ -2,7 +2,7 @@ const getAvailabilityController = require("../../controllers/availability/getAva
 const getPrice = require("./getPrice")
 
 let getAvailabilityHandler = async (req, res)=>{
-    let {id, dateInit, dateEnd, guests, location} = req.body
+    let {id, dateInit, dateEnd, guests} = req.query
     try {
       
         let result = await getAvailabilityController(id, dateInit, dateEnd, guests)
