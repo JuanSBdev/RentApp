@@ -17,18 +17,21 @@ export const changeLanguage = (lang)=>{
     }
 }
 
-export const getAvailability = async (id, dateInit, dateEnd, guests)=>{
+export const getAvailability =  (id, dateInit, dateEnd, guests)=>{
     return async(dispatch)=>{
+        let endpoint = `${URL}/availability?id=${id}&dateInit=${dateInit}&dateEnd=${dateEnd}&guests=${guests}`;
         try {
-            let response = axios(`${URL}/availability`)
-            let data = response.data
+            let response = await axios(endpoint)
+            let data = response.data;
+        // console.log(id, dateInit, dateEnd, guests)
             dispatch({
                 type: GET_AB,
                 payload: data
             })
             
         } catch (error) {
-            console.log( "redux LANGUAGE error" + error)
+            console.log( "redux AVAILABILITY error" + error)
+            
         }
     }
 }
@@ -144,7 +147,7 @@ export const postUser = (user)=>{
 export const getDetail = (id)=>{
     return  async (dispatch)=>{
         try {
-            console.log('disp'+ id)
+            // console.log('disp'+ id)
             let response = await axios(`${URL}/place/${id}`)
             let data = response.data
             dispatch({

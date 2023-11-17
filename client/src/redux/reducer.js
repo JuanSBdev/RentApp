@@ -2,7 +2,7 @@ import {GET_AB, GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, CHA_LA, GET_ALL, GET_D
 const initialState = {
     place: [],
     detail: [],
-    aviability:[],
+    availability:[],
     language: 'es'
 }
 
@@ -15,7 +15,7 @@ const initialState = {
         case GET_AB:
             return{
                 ...state,
-                aviability:action.payload.price
+                availability:action.payload.price
             }
         case CHA_LA:
             return{

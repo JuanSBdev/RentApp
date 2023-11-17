@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
 
 import { useDispatch, useSelector } from 'react-redux';
+import { getAvailability } from '../../../redux/actions';
 
 
 
 export default function FormA() {
   let dispatch = useDispatch()
   let lang = useSelector(state=> state.language)
+  let detail = useSelector(state=> state.detail[0])
 
   const [inputType, setInputType] = useState('text');
   
@@ -38,7 +40,7 @@ let handleDate = ()=>{
 }
 let submitForm =(e)=>{
   e.preventDefault()
-  // console.log(form.city + 'from form')
+  // console.log(form.dateTo, form.dateFrom, form.guests, detail.id + 'from form Availability')
   if(!form.dateFrom && !form.dateTo && !form.guests){
       alert('Faltan datos')
   }
@@ -52,10 +54,10 @@ let submitForm =(e)=>{
   else if(form.dateFrom && !form.dateTo && form.guests){    alert('Faltan datos')
   }
   else  {
-    dispatch( getPlacesComplete(form.city, form.dateFrom, form.dateTo, form.guests))
+    dispatch( getAvailability(detail.id, form.dateFrom, form.dateTo, form.guests))
   }
  
-  // window.scrollBy(0, 500);
+  
 }
 
 return (
