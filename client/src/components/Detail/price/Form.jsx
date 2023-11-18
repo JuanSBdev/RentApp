@@ -29,7 +29,7 @@ let handleForm = (e)=>{
   }))
 }
 
-let handleDate = ()=>{
+let handleDate = (e)=>{
   e.preventDefault()
   
   let {value, name} = e.target;
@@ -61,7 +61,7 @@ let submitForm =(e)=>{
 }
 
 return (
-<div className= { ` flex items-center justify-center w-100 h-screen m-2 ` }  >
+<div className= { ` flex items-center justify-center w-100 h-screen  -my-5` }  >
    {lang === 'es' ? (
        
        <form  className=" border border-[#259073] flex flex-col items-center bg-[#fcffee] rounded shadow-lg p-5 mt-0  lg:flex-row " action="">
