@@ -11,7 +11,7 @@ export default function Carlos() {
     let lang = useSelector(state => state.language)
 
     let buscarCarlos = ()=>{
-        dispatch(getPlaceByName('carlos'))
+        dispatch(getPlaceByName('marcos'))
     }
     
   return (
