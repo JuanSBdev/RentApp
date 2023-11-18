@@ -12,8 +12,8 @@ let getAvailabilityHandler = async (req, res)=>{
         }
         else{
            let place = result[0]
-            let price = await getPrice(place, dateInit,dateEnd)
-            res.status(200).json({result, price})
+            let price = await getPrice(place, dateInit, dateEnd)
+            res.status(200).json({result, price, dateInit, dateEnd})
         }
     } catch (error) {
         res.status(400).json(error)

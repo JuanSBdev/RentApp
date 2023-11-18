@@ -8,7 +8,7 @@ const getPlaceByDateHandler = require('../handlers/getPlaces/getPlaceByDateHandl
 const getPlaceForm = require('../handlers/getPlaces/getPlaceForm');
 const createUserHandler = require('../handlers/Users/createUserHandler');
 const userRouter = require('./userRouter');
-const getAvailabilityHandler = require('../handlers/abiability/getAvailabilityHandler');
+const getAvailabilityHandler = require('../handlers/availability/getAvailabilityHandler');
 
 
 const router = Router();
