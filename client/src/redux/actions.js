@@ -22,7 +22,7 @@ export const getAvailability =  (id, dateInit, dateEnd, guests)=>{
         let endpoint = `${URL}/availability?id=${id}&dateInit=${dateInit}&dateEnd=${dateEnd}&guests=${guests}`;
         try {
             let response = await axios(endpoint)
-            let data = response.data.price;
+            let data = response.data;
         // console.log(id, dateInit, dateEnd, guests)
             dispatch({
                 type: GET_AB,
