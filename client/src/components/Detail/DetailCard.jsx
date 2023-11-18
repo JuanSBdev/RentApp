@@ -8,7 +8,7 @@ export default function DetailCard() {
   return (
     <div className={ `${styles.wrapper}  pt-4 flex items-center flex-col`}>
           <div className=" self-start">
-          { place && <h1 className=' ml-5 py-5 text-white'>{place.name}</h1> }
+          { place && <h1 className=' ml-5 py-5 text-white'>{place.location}</h1> }
 
           </div>
             <SliderTss />

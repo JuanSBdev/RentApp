@@ -14,7 +14,10 @@ import {
        
         <CardBody>
           <Typography variant="h5" color="blue-gray" className="mb-2">
-            Info
+            {place && <div className="">
+              <p>{place.name}</p>
+            </div>
+            }
           </Typography>
           <Typography variant="paragraph">
             The place is close to Barceloneta Beach and bus stop just 2 min by
