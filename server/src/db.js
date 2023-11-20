@@ -4,6 +4,7 @@ const {Sequelize} = require ('sequelize')
 
 const placeModel = require('./models/place')
 const userModel = require('./models/user')
+const reserveModel = require('./models/reserve')
 
 
 const sequelize = new Sequelize(`${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
@@ -15,8 +16,12 @@ const sequelize = new Sequelize(`${DB_DIALECT}://${DB_USER}:${DB_PASSWORD}@${DB_
 
 placeModel(sequelize)
 userModel(sequelize)
+reserveModel(sequelize)
 
-const { Place, User } = sequelize.models
+const { Place, User, Reserve } = sequelize.models
+User.hasMany(Reserve,{foreignKey: 'userId'})
+Reserve.belongsTo(User,{foreignKey:'reserveId'})
+
 
 module.exports = {...sequelize.models,
     conn:sequelize}
