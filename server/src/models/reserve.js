@@ -6,5 +6,13 @@ module.exports = (sequelize)=> {
             primaryKey:true,
             defaultValue:DataTypes.UUIDV4,
         },
+        dateInit:{
+            type:DataTypes.DATEONLY,
+            allowNull: false,
+        },
+        dateEnd:{
+            type:DataTypes.DATEONLY,
+            allowNull: false,
+        }
     })
 }
