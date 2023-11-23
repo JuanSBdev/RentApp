@@ -16,6 +16,7 @@ module.exports = (sequelize)=> {
         },
         status:{
             type:DataTypes.ENUM('confirmed', 'aproved', 'inCourse', 'canceled'),
+            defaultValue:'confirmed',
             allowNull: true,
         }
     })
