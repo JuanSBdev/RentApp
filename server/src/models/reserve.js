@@ -13,6 +13,10 @@ module.exports = (sequelize)=> {
         dateEnd:{
             type:DataTypes.DATEONLY,
             allowNull: false,
+        },
+        status:{
+            type:DataTypes.ENUM,
+            allowNull: false,
         }
     })
 }
