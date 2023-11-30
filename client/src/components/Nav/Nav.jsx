@@ -76,11 +76,21 @@ export default function Nav() {
           </li>
 
         ):(
+          <div className="">
+
+          <li>
+              <button >
+                    My Reserve
+              </button>
+
+
+          </li>
           <li>
               <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
                 Log Out
-              </button>
+               </button>
           </li>
+          </div>
 
         )
       }
