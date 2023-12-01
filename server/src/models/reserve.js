@@ -18,6 +18,10 @@ module.exports = (sequelize)=> {
             type:DataTypes.ENUM('confirmed', 'aproved', 'inCourse', 'canceled'),
             defaultValue:'confirmed',
             allowNull: true,
+        },
+        total:{
+            type:DataTypes.INTEGER,
+            allowNull: true,
         }
     })
 }
