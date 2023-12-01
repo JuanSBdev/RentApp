@@ -20,7 +20,7 @@ reserveModel(sequelize)
 
 const { Place, User, Reserve } = sequelize.models
 User.hasMany(Reserve,{foreignKey: 'userId'})
-Reserve.belongsTo(User,{foreignKey:'reserveId'})
+Reserve.belongsTo(User,{foreignKey:'userId'})
 
 
 module.exports = {...sequelize.models,
