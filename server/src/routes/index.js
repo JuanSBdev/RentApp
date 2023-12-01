@@ -9,6 +9,7 @@ const getPlaceForm = require('../handlers/getPlaces/getPlaceForm');
 const createUserHandler = require('../handlers/Users/createUserHandler');
 const userRouter = require('./userRouter');
 const getAvailabilityHandler = require('../handlers/availability/getAvailabilityHandler');
+const createReserveHandler = require('../handlers/reserves/createReserveHandler');
 
 
 const router = Router();
@@ -23,6 +24,7 @@ router.get('/place/:id', getPlaceById )
 router.get('/availability', getAvailabilityHandler )
 // router.use('/user', userRouter )
 router.post('/user', createUserHandler )
+router.post('/reserve', createReserveHandler)
 
 
 
