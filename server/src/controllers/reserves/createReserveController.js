@@ -1,5 +1,6 @@
 const { User, Reserve, Place } = require('../../db');
 const getPrice = require('../../handlers/availability/getPrice');
+const getDatesArray = require('./getDatesArray');
 const createReserveController = async ( dateInit, dateEnd, userId, placeId )=>{
     // console.log(dateInit, dateEnd, userId + 'datos controller ')
     const userFound = await User.findByPk(userId)
@@ -9,6 +10,14 @@ const createReserveController = async ( dateInit, dateEnd, userId, placeId )=>{
     let newReserve = await Reserve.create({dateInit, dateEnd, total})
     await newReserve.setUser(userFound);
     await newReserve.setPlace(placeFound);
+
+    
+     const unavailableDates = placeFound.unavailable_dates || [];
+     const datesToAdd = getDatesArray(dateInit, dateEnd);
+     const updatedUnavailableDates = [...unavailableDates, ...datesToAdd];
+ 
+     // Actualizar el modelo Place con las nuevas fechas no disponibles
+     await placeFound.update({ unavailable_dates: updatedUnavailableDates })
 
     return newReserve;
 }

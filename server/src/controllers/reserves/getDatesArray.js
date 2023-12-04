@@ -10,4 +10,4 @@ function getDatesArray(startDate, endDate) {
     return datesArray;
 }
 
-module.exports = createReserveController;
+module.exports = getDatesArray;
