@@ -6,6 +6,7 @@ const createReserveController = async ( dateInit, dateEnd, userId, placeId )=>{
     let newReserve = await Reserve.create({dateInit, dateEnd})
     
     await newReserve.setUser(userFound);
+    await newReserve.setPlace(placeFound);
 
     return newReserve;
 }
