@@ -6,8 +6,8 @@ export default function Options() {
   return (<div className="">
     {availability && availability.price &&
     <div>
-    <p>Room: {availability.type}</p>
-    <p>Max Guests {availability.max_occupancy_per_room}</p>
+    <p>Room: {availability.place.type}</p>
+    <p>Max Guests {availability.place.max_occupancy_per_room}</p>
     <p>desde {availability.dateInit}</p>
     <p>Hasta {availability.dateEnd}</p>
     <p>Total: {availability.price}</p>
