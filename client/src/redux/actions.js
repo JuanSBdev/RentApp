@@ -160,6 +160,13 @@ export const getDetail = (id)=>{
     }
 }
 
-export const postReserve = ()=>{
-    
+export const postReserve = (userId, placeId, dateInit, dateEnd)=>{
+    return async (dispatch)=>{
+        let endpoint =  `${URL}/reserve`
+        try {
+            
+        } catch (error) {
+            
+        }
+    }
 }
