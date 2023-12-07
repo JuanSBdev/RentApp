@@ -5,11 +5,11 @@
 }
 .wrapper{
     display: flex;
+    flex-flow: column;
     align-items: center;
 
 }
 .data{
     display: flex;
     flex-flow: column nowrap;
-    margin-right: 12%;
 }

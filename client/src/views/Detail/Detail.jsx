@@ -18,13 +18,17 @@ export default function Detail() {
     dispatch(getDetail(id))
   },[id])
 
+  let availability = useSelector(state => state.availability)
   let places = useSelector(state => state.detail[0])
   return (
     <div className={`${styles.wrapper} flex flex-col align-center `} >
       <DetailCard/>
-        <FormA/>
+        {!availability.price &&
+        <FormA/>}
       <div className="prices flex items-center justify-center w-100 	 ">
+        { availability && availability.price &&
         <Options/>
+        }
       </div>
 
     </div>
