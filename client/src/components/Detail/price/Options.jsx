@@ -7,12 +7,13 @@ import { useAuth0 } from '@auth0/auth0-react'
 export default function Options() {
   let dispatch = useDispatch()
   let availability = useSelector(state => state.availability)
-  let{ user} = useAuth0()
+  let userRdx = useSelector(state => state.user)
+
   let makeReserve = ()=>{
-    // dispatch(
-    //   postReserve( availability.dateInit, availability.dateEnd,   )
-    // )
-    console.log(user.id)
+    dispatch(
+      postReserve( userRdx.id,availability.place.id, availability.dateInit, availability.dateEnd,   )
+    )
+    console.log(userRdx.id)
   }
 
   return (
@@ -25,7 +26,7 @@ export default function Options() {
           <p>Hasta {availability.dateEnd}</p>
           <p>Total: {availability.price}</p>
         </div>
-        <button className='flex items-center justify-center h-12 px-6 w-64            bg-[#259073] rounded font-bold text-sm text-blue-100 hover:bg-[#7fda89] mt-3.5' onClick={makeReserve()}> Reserve </button>
+        <button className='flex items-center justify-center h-12 px-6 w-64            bg-[#259073] rounded font-bold text-sm text-blue-100 hover:bg-[#7fda89] mt-3.5' onClick={()=> makeReserve()}> Reserve </button>
       </div>
     
     </div>

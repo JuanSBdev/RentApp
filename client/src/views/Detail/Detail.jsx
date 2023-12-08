@@ -23,8 +23,16 @@ export default function Detail() {
   return (
     <div className={`${styles.wrapper} flex flex-col align-center `} >
       <DetailCard/>
-        {!availability.price &&
-        <FormA/>}
+        {!availability.price && availability ? (
+          <div className="">
+              <FormA/>
+              <h2>'No tiene disponibilidad en esta fecha</h2>
+
+            </div>
+          ):(
+            <FormA/>
+          )
+        }
       <div className="prices flex items-center justify-center w-100 	 ">
         { availability && availability.price &&
         <Options/>

@@ -1,8 +1,9 @@
-import {GET_AB, GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, CHA_LA, GET_ALL, GET_DET, POST_RES } from "./action_types"
+import {GET_AB, GET_DATE, GET_FORM, GET_GUESTS, GET_NAME, CHA_LA, GET_ALL, GET_DET, POST_RES, POST_USER } from "./action_types"
 const initialState = {
     place: [],
     detail: [],
     availability:[],
+    user:[],
     language: 'es'
 }
 
@@ -47,6 +48,11 @@ const initialState = {
             return{
                 ...state,
                 detail: [action.payload]
+            }
+        case POST_USER:
+            return{
+                ...state,
+                user: action.payload
             }
         case POST_RES:
             return{

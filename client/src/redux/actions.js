@@ -123,27 +123,7 @@ export const getAllPlaces = ()=>{
 
 // user
 
-export const postUser = (user)=>{
-    return async (dispatch)=>{
-        let endpoint =  `${URL}/user`
-        let postData = {
-            mail: user.email,
-            isAdmin: user.isAdmin
-        }
-        try {
-            let response = await axios.post(endpoint, postData);
-            let data = response.data;
-            console.log(data)
-            dispatch({
-                type: POST_USER,
-                payload: data
-            })
-        } catch (error) {
-            console.log("redux error postUser" + error )
 
-        }
-    }
-}
 
 export const getDetail = (id)=>{
     return  async (dispatch)=>{
@@ -180,6 +160,26 @@ export const postReserve = (userId, placeId, dateInit, dateEnd)=>{
             
         } catch (error) {
             console.log("redux error postReserve" + error )
+
+        }
+    }
+}
+export const postUser = (user)=>{
+    return async (dispatch)=>{
+        let endpoint =  `${URL}/user`
+        let postData = {
+            mail: user.email,
+            isAdmin: user.isAdmin
+        }
+        try {
+            let response = await axios.post(endpoint, postData);
+            let data = response.data[0];
+            dispatch({
+                type: POST_USER,
+                payload: data
+            })
+        } catch (error) {
+            console.log("redux error postUser" + error )
 
         }
     }
