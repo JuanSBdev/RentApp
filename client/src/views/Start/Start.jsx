@@ -20,9 +20,7 @@ export default function Start() {
 useEffect(()=>{
   dispatch(getAllPlaces())
 },[])
-useEffect(()=>{
-  dispatch(postUser(user))
-},[user])
+
 
 
 

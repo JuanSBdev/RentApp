@@ -133,6 +133,7 @@ export const postUser = (user)=>{
         try {
             let response = await axios.post(endpoint, postData);
             let data = response.data;
+            console.log(data)
             dispatch({
                 type: POST_USER,
                 payload: data

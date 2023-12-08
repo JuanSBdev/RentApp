@@ -2,19 +2,30 @@ import React, { useEffect } from 'react'
 import Styles from './Nav.module.css'
 import { useAuth0 } from "@auth0/auth0-react";
 import { useDispatch, useSelector } from 'react-redux';
-import { changeLanguage } from '../../redux/actions';
+import { changeLanguage, postUser } from '../../redux/actions';
 
 export default function Nav() {
   const { loginWithRedirect, logout, user, isLoading} = useAuth0();
 
-
-
-    let dispatch = useDispatch()
-    let lang = useSelector(state=> state.language)
-    let changeLang = (lang)=>{
+  
+  let dispatch = useDispatch()
+  let lang = useSelector(state=> state.language)
+  
+  let changeLang = (lang)=>{
     dispatch(changeLanguage(`${lang}`))
-      console.log(lang)
-   }
+    console.log(lang)
+  }
+  
+  useEffect(()=>{
+    
+    if(user){
+      dispatch(postUser(user))
+  
+    }
+    else{
+      console.log('condiciones')
+    }
+  }, [!isLoading])
 
 
   return (
