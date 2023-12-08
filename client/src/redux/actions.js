@@ -163,6 +163,12 @@ export const getDetail = (id)=>{
 export const postReserve = (userId, placeId, dateInit, dateEnd)=>{
     return async (dispatch)=>{
         let endpoint =  `${URL}/reserve`
+        let postData = {
+            dateInit,
+            dateEnd,
+            userId,
+            placeId
+        }
         try {
             
         } catch (error) {
