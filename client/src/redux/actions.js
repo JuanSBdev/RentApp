@@ -1,5 +1,5 @@
 import axios from 'axios'
-import  {GET_AB, CHA_LA, GET_ALL, GET_DATE, GET_DET, GET_FORM, GET_GUESTS, GET_NAME, POST_USER} from './action_types'
+import  {GET_AB, CHA_LA, GET_ALL, GET_DATE, GET_DET, GET_FORM, GET_GUESTS, GET_NAME, POST_USER, POST_RES} from './action_types'
 
 const URL = 'http://localhost:63076'
 
@@ -170,9 +170,16 @@ export const postReserve = (userId, placeId, dateInit, dateEnd)=>{
             placeId
         }
         try {
+            let result = await axios.post(endpoint, postData)
+            let data = result.data;
+            dispatch({
+                type: POST_RES,
+                payload: data
+            })
             
         } catch (error) {
-            
+            console.log("redux error postReserve" + error )
+
         }
     }
 }
