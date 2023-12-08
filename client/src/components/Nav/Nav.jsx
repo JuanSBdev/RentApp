@@ -17,14 +17,10 @@ export default function Nav() {
   }
   
   useEffect(()=>{
-    
-    if(user){
+    if(!isLoading &&  user){
       dispatch(postUser(user))
-  
     }
-    else{
-      console.log('condiciones')
-    }
+    
   }, [!isLoading])
 
 
