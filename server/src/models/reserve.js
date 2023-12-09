@@ -7,11 +7,11 @@ module.exports = (sequelize)=> {
             defaultValue:DataTypes.UUIDV4,
         },
         dateInit:{
-            type:DataTypes.DATEONLY,
+            type:DataTypes.DATE,
             allowNull: false,
         },
         dateEnd:{
-            type:DataTypes.DATEONLY,
+            type:DataTypes.DATE,
             allowNull: false,
         },
         status:{
