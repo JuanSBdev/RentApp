@@ -11,7 +11,7 @@ export default function DetailCard() {
           { place && <h1 className=' ml-5 py-5 text-white'>{place.location}</h1> }
 
           </div>
-            <SliderTss />
+            {/* <SliderTss /> */}
             <PlaceData/>
             
 
