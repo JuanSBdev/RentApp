@@ -12,6 +12,7 @@ export default function Options() {
 
   let makeReserve = ()=>{
     if (userRdx.length <= 0) {
+      alert('Login First')
       loginWithRedirect()
     } else {
       
