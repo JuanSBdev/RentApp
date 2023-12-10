@@ -8,12 +8,17 @@ export default function Options() {
   let dispatch = useDispatch()
   let availability = useSelector(state => state.availability)
   let userRdx = useSelector(state => state.user)
+  const { loginWithRedirect, user, isLoading} = useAuth0();
 
   let makeReserve = ()=>{
-    dispatch(
-      postReserve( userRdx.id,availability.place.id, availability.dateInit, availability.dateEnd,   )
-    )
-    console.log(userRdx.id)
+    if (userRdx.length <= 0) {
+      loginWithRedirect()
+    } else {
+      
+      dispatch(
+        postReserve( userRdx.id,availability.place.id, availability.dateInit, availability.dateEnd,   )
+      )
+    }
   }
 
   return (
