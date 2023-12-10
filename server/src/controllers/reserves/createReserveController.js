@@ -8,6 +8,10 @@ const createReserveController = async ( dateInit, dateEnd, userId, placeId )=>{
     const adjustedDateEnd = new Date(`${dateEnd}T10:00:00`);
 
      const userFound = await User.findByPk(userId)
+     if (!userFound) {
+        throw new Error('User not found.');
+    }
+
     const placeFound = await Place.findByPk(placeId)
     const existingReservations = await Reserve.findAll({
         where: {
