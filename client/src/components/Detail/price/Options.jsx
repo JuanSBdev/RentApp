@@ -26,7 +26,8 @@ export default function Options() {
           <p>Hasta {availability.dateEnd}</p>
           <p>Total: {availability.price}</p>
         </div>
-        <button className='flex items-center justify-center h-12 px-6 w-64            bg-[#259073] rounded font-bold text-sm text-blue-100 hover:bg-[#7fda89] mt-3.5' onClick={()=> makeReserve()}> Reserve </button>
+        
+          <button className='flex items-center justify-center h-12 px-6 w-64            bg-[#259073] rounded font-bold text-sm text-blue-100 hover:bg-[#7fda89] mt-3.5' onClick={()=> makeReserve()}> Reserve </button>
       </div>
     
     </div>
