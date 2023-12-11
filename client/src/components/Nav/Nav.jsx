@@ -73,11 +73,11 @@ export default function Nav() {
       }
 
     </button>
-    <ul tabIndex={1} className='menu menu-sm dropdown-content mx-0  z-[1]  shadow bg-base-100 rounded-box w-40 -ml-12 pl-5'>
+    <ul tabIndex={1} className='menu menu-sm dropdown-content  z-[1]  shadow bg-base-100 rounded-box w-max  '>
       {
         !user ? (
           <li >
-                <button onClick={() => loginWithRedirect()}>
+                <button  onClick={() => loginWithRedirect()}>
                 Log In
                 </button>
           </li>
