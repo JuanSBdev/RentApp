@@ -14,7 +14,7 @@ export default function FormStart() {
   
   let [form, setForm] = useState({
     city: "capilla",
-    guests:"",
+    guests:"1",
     dateFrom: "",
     dateTo: ""
   })
