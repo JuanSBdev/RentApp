@@ -3,7 +3,7 @@ import Styles from './Nav.module.css'
 import { useAuth0 } from "@auth0/auth0-react";
 import { useDispatch, useSelector } from 'react-redux';
 import { changeLanguage, postUser } from '../../redux/actions';
-
+import { NavLink } from 'react-router-dom';
 export default function Nav() {
   const { loginWithRedirect, logout, user, isLoading} = useAuth0();
 
