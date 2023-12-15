@@ -6,5 +6,6 @@ let getReservesController = async (userId)=>{
             userId: userId
         } 
     })
+    return reserveFound
 }
 module.exports = getReservesController;

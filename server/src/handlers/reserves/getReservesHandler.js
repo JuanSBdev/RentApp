@@ -1,9 +1,9 @@
 const axios = require('axios')
-const getReservesController = require('../../controllers/reserves/getResevesController')
+const getReservesController = require('../../controllers/reserves/getReservesController')
 let getReservesHandler = async (req, res)=>{
     let {userId} = req.params    
     try {
-        let result = getReservesController(userId)
+        let result = await getReservesController(userId)
         res.status(200).json(result)
     } catch (error) {
         res.status(400).json({errorDate: error.message})
