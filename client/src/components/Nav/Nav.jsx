@@ -86,11 +86,9 @@ export default function Nav() {
           <div className="">
 
           <li>
-              <button >
-                    My Reserve
-              </button>
-
-
+              <NavLink to={'/reserves'}>
+                Reserves
+              </NavLink>
           </li>
           <li>
               <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
