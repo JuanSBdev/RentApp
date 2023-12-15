@@ -11,6 +11,7 @@ const userRouter = require('./userRouter');
 const getAvailabilityHandler = require('../handlers/availability/getAvailabilityHandler');
 const createReserveHandler = require('../handlers/reserves/createReserveHandler');
 const getUser = require('../controllers/Users/getUser');
+const getReservesHandler = require('../handlers/reserves/getReservesHandler');
 
 
 const router = Router();
@@ -27,6 +28,7 @@ router.get('/availability', getAvailabilityHandler )
 router.post('/user', createUserHandler ) 
 router.get('/user/:id', getUser ) 
 router.post('/reserve', createReserveHandler)
+router.get('/reserve/:userId', getReservesHandler)
 
 
 
