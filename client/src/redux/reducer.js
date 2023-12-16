@@ -1,4 +1,4 @@
-import {GET_AB, GET_DATE, GET_FORM,GET_RES, GET_GUESTS, GET_NAME, CHA_LA, GET_ALL, GET_DET, POST_RES, POST_USER } from "./action_types"
+import {GET_AB, GET_DATE, GET_FORM, GET_RES, GET_GUESTS, GET_NAME, CHA_LA, GET_ALL, GET_DET, POST_RES, POST_USER } from "./action_types"
 const initialState = {
     place: [],
     detail: [],
@@ -60,6 +60,7 @@ const initialState = {
                 ...state,
             }
         case GET_RES:
+            console.log('reducer' + action.payload[0])
             return{
                 ...state,
                 reserves: action.payload

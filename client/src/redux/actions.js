@@ -45,7 +45,7 @@ export const getReserves =  (userId)=>{
                 type: GET_RES,
                 payload: data
             })
-            
+            console.log(data)
         } catch (error) {
             console.log( "redux RESERVES error" + error)
             
