@@ -1,5 +1,5 @@
 import axios from 'axios'
-import  {GET_AB, CHA_LA, GET_ALL, GET_DATE, GET_DET, GET_FORM, GET_GUESTS, GET_NAME, POST_USER, POST_RES} from './action_types'
+import  {GET_AB, CHA_LA, GET_ALL, GET_DATE, GET_DET, GET_FORM, GET_GUESTS, GET_NAME, POST_USER, POST_RES, GET_RES} from './action_types'
 
 const URL = 'http://localhost:63076'
 
@@ -31,6 +31,23 @@ export const getAvailability =  (id, dateInit, dateEnd, guests)=>{
             
         } catch (error) {
             console.log( "redux AVAILABILITY error" + error)
+            
+        }
+    }
+}
+export const getReserves =  (userId)=>{
+    return async(dispatch)=>{
+        let endpoint = `${URL}/reserve/${userId}`;
+        try {
+            let response = await axios(endpoint)
+            let data = response.data;
+            dispatch({
+                type: GET_RES,
+                payload: data
+            })
+            
+        } catch (error) {
+            console.log( "redux RESERVES error" + error)
             
         }
     }
