@@ -4,6 +4,7 @@ const initialState = {
     detail: [],
     availability:[],
     user:[],
+    reserves:[],
     language: 'es'
 }
 
@@ -57,6 +58,11 @@ const initialState = {
         case POST_RES:
             return{
                 ...state,
+            }
+        case GET_RES:
+            return{
+                ...state,
+                reserves: action.payload
             }
 
         default:
