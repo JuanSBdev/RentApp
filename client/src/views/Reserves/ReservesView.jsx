@@ -12,11 +12,15 @@ export default function Reserves(){
     },[])
 
     let lang = useSelector(state=> state.language)
+    let reservesRdx = useSelector(state=> state.reserves)
  return(
     <div className="">
         {lang === 'es' ? (
-                    <h1 className="text-white m-4">Mis reservas</h1>
+            <div className="">
 
+                    <h1 className="text-white m-4">Mis reservas</h1>
+                    {reservesRdx.map(r =>( <p className="text-white">{r.id}</p> ))}
+            </div>
                     
 
         ):(
