@@ -24,8 +24,11 @@ export default function Reserves(){
                     
 
         ):(
-                    <h1 className="text-white m-4">Reserves</h1>
+        <div className="">
 
+<h1 className="text-white m-4">Reserves</h1>
+{reservesRdx.map(r =>( <p className="text-white">{r.id}</p> ))}
+        </div>
         )}
     </div>
  )
