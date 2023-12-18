@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Style from './Options.module.css'
 import { postReserve } from '../../../redux/actions'
@@ -11,6 +11,12 @@ export default function Options() {
   let availability = useSelector(state => state.availability)
   let userRdx = useSelector(state => state.user)
   let lang = useSelector(state => state.language)
+  let [btnReserveTxt, setBtnReserveTxt] = useState('Mis reservas')
+  useEffect( ()=>{
+    if(lang === 'en'){
+      setBtnReserveTxt( 'My reserves')
+    }
+  },[lang])
   
   let [reserved, setReserved] = useState(false)
   let makeReserve = ()=>{
@@ -40,7 +46,7 @@ export default function Options() {
         { !reserved ? (
           <button className='flex items-center justify-center h-12 px-6 w-64            bg-[#259073] rounded font-bold text-sm text-blue-100 hover:bg-[#7fda89] mt-3.5' onClick={()=> makeReserve()}> Reserve </button>
           ):(
-            <NavLink className='flex items-center justify-center h-12 px-6 w-64            bg-[#259073] rounded font-bold text-sm text-blue-100 hover:bg-[#7fda89] mt-3.5'  to={'/reserves'}>Reservas</NavLink>
+            <NavLink   to={'/reserves'}> {btnReserveTxt} </NavLink>
         )
 
         }
