@@ -53,7 +53,8 @@ export default function Options() {
         { !reserved ? (
           <button className='flex items-center justify-center h-12 px-6 w-64            bg-[#259073] rounded font-bold text-sm text-blue-100 hover:bg-[#7fda89] mt-3.5' onClick={()=> makeReserve()}> Reserve </button>
           ):(
-            <NavLink   to={'/reserves'}> {btnReserveTxt} </NavLink>
+            <NavLink className='flex items-center justify-center h-12 px-6 w-64            bg-[#16A085] rounded font-bold text-sm text-white hover:bg-[#2E86C1] mt-3.5'
+            to={'/reserves'}> {btnReserveTxt} </NavLink>
         )
 
         }
