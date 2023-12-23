@@ -23,12 +23,29 @@ export default function Reserves(){
 
                     <h1 className="text-white m-4">Mis reservas</h1>
                     {reservesRdx.map(r =>( 
-                        <div className="">
-                            <p className="text-white"> { placeRdx.find((p) => p.id === r.placeId)?.name  }</p>
-                            <p className="text-white"> Estado {r.status}</p>
-                            <p className="text-white"> desde {r.dateInit}</p>
-                            <p className="text-white"> hasta {r.dateEnd}</p>
-                            <p className="text-white"> precio {r.total}$</p>
+                        <div className={Styles.reserves}>
+                            
+                                <div className="">
+                                    <p className="text-white"> { placeRdx.find((p) => p.id === r.placeId)?.name  }</p>
+                                </div>
+                                <div className="">
+                                    <p>estado</p>
+                                    <p className="text-white">  {r.status}</p>
+                                </div>
+                                <div className="">
+                                    <p>desde</p>
+                                    <p className="text-white">  {r.dateInit.slice(0, 10)}</p>
+                                </div>
+                                <div className="">
+                                    <p>hasta</p>
+                                    <p className="text-white"> {r.dateEnd.slice(0, 10)}</p>
+                                </div>
+                                <div className="">
+                                    <p>precio</p>
+                                    <p className="text-white"> {r.total }$</p>
+                                </div>
+                           
+                            
                         </div>
 
                      ))}

@@ -1,0 +1,23 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.wrapperEs{
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+    background-color: rgba(240, 248, 255, 0.204);
+    margin-top: 5%;
+    border: 2px solid green;
+    border-radius: 1rem;
+    padding: 2%;
+}
+.reserves{
+    display: flex;
+}
+.reserves div {
+    padding: 2%;
+}
