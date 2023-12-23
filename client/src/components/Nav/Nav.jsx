@@ -50,8 +50,8 @@ export default function Nav() {
     </div>
   </div>
   <div className=" flex items-end navbar-center">
-    <a href='/' className=" normal-case text-xl text-[#fff]">Kirá
-    </a>
+    <NavLink to={'/'} className=" normal-case text-xl text-[#fff]">Kirá
+    </NavLink>
     <p className="text-[black] text-l ml-2" >Alquiler</p>
   </div>
   <div className="navbar-end">
