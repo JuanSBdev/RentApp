@@ -12,10 +12,10 @@ const getAvailabilityHandler = require('../handlers/availability/getAvailability
 const createReserveHandler = require('../handlers/reserves/createReserveHandler');
 const getUser = require('../controllers/Users/getUser');
 const getReservesHandler = require('../handlers/reserves/getReservesHandler');
+const deleteReserveHandler = require('../handlers/reserves/deleteReserveHandler');
 
 
 const router = Router();
-// server.get('/', (req, res)=> getPlaces(req, res))
 
 router.get('/start', getPlaces )
 router.get('/place/:location/:dateInit/:dateFinish/:guests',  getPlaceForm)
@@ -28,6 +28,7 @@ router.get('/availability', getAvailabilityHandler )
 router.post('/user', createUserHandler ) 
 router.get('/user/:id', getUser ) 
 router.post('/reserve', createReserveHandler)
+router.delete('/reserve', deleteReserveHandler)
 router.get('/reserve/:userId', getReservesHandler)
 
 
