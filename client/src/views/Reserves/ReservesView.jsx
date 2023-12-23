@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getReserves } from "../../redux/actions";
+import Styles from "./ReservesView.module.css";
 
 export default function Reserves(){
+    
     let dispatch = useDispatch()
     let userRdx = useSelector(state => state.user)
     useEffect(()=>{
@@ -15,9 +17,9 @@ export default function Reserves(){
     let reservesRdx = useSelector(state=> state.reserves)
     let placeRdx = useSelector(state=> state.place)
  return(
-    <div className="">
+    <div className={Styles.wrapper}>
         {lang === 'es' ? (
-            <div className="">
+            <div className={Styles.wrapperEs}>
 
                     <h1 className="text-white m-4">Mis reservas</h1>
                     {reservesRdx.map(r =>( 
@@ -32,7 +34,6 @@ export default function Reserves(){
                      ))}
             </div>
                     
-
         ):(
         <div className="">
             <h1 className="text-white m-4">Reserves</h1>

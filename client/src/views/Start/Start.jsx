@@ -21,9 +21,6 @@ useEffect(()=>{
   dispatch(getAllPlaces())
 },[])
 
-
-
-
     
   return (
     <div className={Styles.wrapper}>
