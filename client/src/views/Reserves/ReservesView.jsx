@@ -18,7 +18,7 @@ export default function Reserves(){
     let placeRdx = useSelector(state=> state.place)
  return(
     <div className={Styles.wrapper}>
-        <h1 className="text-white m-4">Mis reservas</h1>
+            <h1 className="text-white mt-4">Mis reservas</h1>
         {lang === 'es' ? (
             <div className={Styles.wrapperEs}>
 
