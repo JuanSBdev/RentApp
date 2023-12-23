@@ -23,6 +23,13 @@
 .reserves div {
     padding: 2%;
 }
+
+.dataText{
+    color: rgb(56, 207, 159);
+}
+.placeName{
+    align-self: center;
+}
 .btnPay{
 
     color: rgb(56, 207, 159);

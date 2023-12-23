@@ -25,24 +25,24 @@ export default function Reserves(){
                     {reservesRdx.map(r =>( 
                         <div className={Styles.reserves}>
                             
-                                <div className="">
-                                    <p className="text-white"> { placeRdx.find((p) => p.id === r.placeId)?.name  }</p>
+                                <div className={Styles.placeName}>
+                                    <p className="text-white" > { placeRdx.find((p) => p.id === r.placeId)?.name  }</p>
                                 </div>
                                 <div className="">
-                                    <p>estado</p>
-                                    <p className="text-white">  {r.status}</p>
-                                </div>
-                                <div className="">
-                                    <p>desde</p>
+                                    <p className={Styles.dataText}>desde</p>
                                     <p className="text-white">  {r.dateInit.slice(0, 10)}</p>
                                 </div>
                                 <div className="">
-                                    <p>hasta</p>
+                                    <p className={Styles.dataText}>hasta</p>
                                     <p className="text-white"> {r.dateEnd.slice(0, 10)}</p>
                                 </div>
                                 <div className="">
-                                    <p>precio</p>
+                                    <p className={Styles.dataText}>precio</p>
                                     <p className="text-white"> {r.total }$</p>
+                                </div>
+                                <div className="">
+                                    <p className={Styles.dataText}>estado</p>
+                                    <p className="text-white">  {r.status}</p>
                                 </div>
                                     <button className={Styles.btnPay}>Pagar</button>
                                     <button className={Styles.btnCancel}>Cancelar</button>
