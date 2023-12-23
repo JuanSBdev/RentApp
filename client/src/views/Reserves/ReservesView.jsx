@@ -44,6 +44,8 @@ export default function Reserves(){
                                     <p>precio</p>
                                     <p className="text-white"> {r.total }$</p>
                                 </div>
+                                    <button className={Styles.btnPay}>Pagar</button>
+                                    <button className={Styles.btnCancel}>Cancelar</button>
                            
                             
                         </div>

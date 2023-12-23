@@ -21,3 +21,34 @@
 .reserves div {
     padding: 2%;
 }
+.btnPay{
+
+    color: rgb(56, 207, 159);
+    border: 1px solid rgb(87, 232, 179);
+    border-radius: 1rem;
+    margin: 3%;
+    padding: 1%;
+    
+    font-size: .7rem;
+}
+
+.btnPay:hover{
+    color: rgb(246, 238, 238);
+    border: 1px solid rgb(42, 9, 9);
+    background-color: rgb(81, 165, 123);
+}
+
+.btnCancel{
+    color: rgb(232, 87, 87);
+    border: 1px solid rgb(232, 87, 87);
+    border-radius: 1rem;
+    margin: 3%;
+    padding: 1%;
+
+    font-size: .7rem;
+}
+.btnCancel:hover{
+    color: rgb(246, 238, 238);
+    border: 1px solid rgb(42, 9, 9);
+    background-color: rgb(232, 87, 87);
+}
