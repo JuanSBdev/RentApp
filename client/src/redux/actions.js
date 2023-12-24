@@ -1,5 +1,5 @@
 import axios from 'axios'
-import  {GET_AB, CHA_LA, GET_ALL, GET_DATE, GET_DET, GET_FORM, GET_GUESTS, GET_NAME, POST_USER, POST_RES, GET_RES} from './action_types'
+import  {GET_AB, CHA_LA, GET_ALL, GET_DATE, GET_DET, GET_FORM, GET_GUESTS, GET_NAME, POST_USER, POST_RES, GET_RES, DEL_RES} from './action_types'
 
 const URL = 'http://localhost:63076'
 
@@ -52,6 +52,23 @@ export const getReserves =  (userId)=>{
         }
     }
 }
+export const deleteReserve =  (reserveId)=>{
+    return async(dispatch)=>{
+        let endpoint = `${URL}/reserve`;
+        try {
+            let response = await axios.delete(endpoint, {idReserve: reserveId})
+            let data = response.data;
+            dispatch({
+                type: DEL_RES,
+                payload: data
+            })
+        } catch (error) {
+            console.log( "redux Delete-RESERVE error" + error)
+            
+        }
+    }
+}
+
 export const getPlacesComplete = (place, dateInit, dateFinish, guests)=>{
     return async (dispatch) =>{
         let endpoint = `${URL}/place/${place}/${dateInit}/${dateFinish}/${guests}`
