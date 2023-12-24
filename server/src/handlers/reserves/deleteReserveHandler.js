@@ -1,7 +1,7 @@
 const deleteReserveController = require("../../controllers/reserves/deleteReserveController")
 let {Reserve}= require('../../db')
 let deleteReserveHandler = async (req, res)=>{
-    let {idReserve} = req.body
+    let {idReserve} = req.params
 try {
     
     let reserveFound = await Reserve.findOne({

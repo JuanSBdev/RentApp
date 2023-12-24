@@ -28,7 +28,7 @@ router.get('/availability', getAvailabilityHandler )
 router.post('/user', createUserHandler ) 
 router.get('/user/:id', getUser ) 
 router.post('/reserve', createReserveHandler)
-router.delete('/reserve', deleteReserveHandler)
+router.delete('/reserve/:idReserve', deleteReserveHandler)
 router.get('/reserve/:userId', getReservesHandler)
 
 
