@@ -5,20 +5,22 @@ import Styles from "./ReservesView.module.css";
 
 export default function Reserves(){
     
-    let dispatch = useDispatch()
+    let reservesRdx = useSelector(state=> state.reserves)
     let userRdx = useSelector(state => state.user)
+    let lang = useSelector(state=> state.language)
+    let placeRdx = useSelector(state=> state.place)
+    let dispatch = useDispatch()
+
     useEffect(()=>{
         dispatch(
             getReserves(userRdx.id)
         )
-    },[])
+    },[dispatch, userRdx.id])
 
-    let lang = useSelector(state=> state.language)
-    let reservesRdx = useSelector(state=> state.reserves)
-    let placeRdx = useSelector(state=> state.place)
 
-    let cancelReserve = (idReserve)=>{
-            dispatch(deleteReserve(idReserve))
+    let cancelReserve = async (idReserve)=>{
+            await dispatch(deleteReserve(idReserve))
+            dispatch(getReserves(userRdx.id))
     }
 
  return(
@@ -27,8 +29,8 @@ export default function Reserves(){
         {lang === 'es' ? (
             <div className={Styles.wrapperEs}>
 
-                    {reservesRdx.map(r =>( 
-                        <div className={Styles.reserves}>
+                    {reservesRdx.map((r, index) =>( 
+                        <div key={index} className={Styles.reserves}>
                             
                                 <div className={Styles.placeName}>
                                     <p className="text-white" > { placeRdx.find((p) => p.id === r.placeId)?.name  }</p>
