@@ -14,23 +14,25 @@ export default function Detail() {
 
   let dispatch = useDispatch()
   let {id} = useParams()
+
   useEffect(()=>{
     dispatch(getDetail(id))
-  },[id])
+  },[dispatch, id])
 
   let availability = useSelector(state => state.availability)
-  let places = useSelector(state => state.detail[0])
+  let detailPlace = useSelector(state => state.detail[0])
   return (
     <div className={`${styles.wrapper} flex flex-col align-center `} >
       <DetailCard/>
-        {!availability.price && availability ? (
+        {!availability.price && availability  ? (
           <div className="">
               <FormA/>
 
             </div>
           ):(
-            <div className="prices flex items-center justify-center w-100 	 ">
+            <div className=" flex items-center justify-center w-100 ">
               <Options/>
+              {/* <p className='text-white'>asdasd</p> */}
             </div>
           )
         }

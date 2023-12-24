@@ -48,7 +48,8 @@ const initialState = {
         case GET_DET:
             return{
                 ...state,
-                detail: [action.payload]
+                detail: action.payload,
+                availability: []
             }
         case POST_USER:
             return{

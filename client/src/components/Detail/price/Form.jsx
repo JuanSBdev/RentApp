@@ -8,7 +8,7 @@ import { getAvailability } from '../../../redux/actions';
 export default function FormA() {
   let dispatch = useDispatch()
   let lang = useSelector(state=> state.language)
-  let detail = useSelector(state=> state.detail[0])
+  let detail = useSelector(state=> state.detail)
 
   const [inputType, setInputType] = useState('text');
   
