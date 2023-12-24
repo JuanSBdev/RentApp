@@ -45,7 +45,7 @@ export const getReserves =  (userId)=>{
                 type: GET_RES,
                 payload: data
             })
-            console.log(data)
+            // console.log(data)
         } catch (error) {
             console.log( "redux RESERVES error" + error)
             
@@ -54,9 +54,9 @@ export const getReserves =  (userId)=>{
 }
 export const deleteReserve =  (reserveId)=>{
     return async(dispatch)=>{
-        let endpoint = `${URL}/reserve`;
+        let endpoint = `${URL}/reserve/${reserveId}`;
         try {
-            let response = await axios.delete(endpoint, {idReserve: reserveId})
+            let response = await axios.delete(endpoint)
             let data = response.data;
             dispatch({
                 type: DEL_RES,

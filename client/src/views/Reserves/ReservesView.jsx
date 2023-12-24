@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getReserves } from "../../redux/actions";
+import { deleteReserve, getReserves } from "../../redux/actions";
 import Styles from "./ReservesView.module.css";
 
 export default function Reserves(){
@@ -16,6 +16,11 @@ export default function Reserves(){
     let lang = useSelector(state=> state.language)
     let reservesRdx = useSelector(state=> state.reserves)
     let placeRdx = useSelector(state=> state.place)
+
+    let cancelReserve = (idReserve)=>{
+            dispatch(deleteReserve(idReserve))
+    }
+
  return(
     <div className={Styles.wrapper}>
             <h1 className="text-white mt-4">Mis reservas</h1>
@@ -45,7 +50,9 @@ export default function Reserves(){
                                     <p className="text-white">  {r.status}</p>
                                 </div>
                                     <button className={Styles.btnPay}>Pagar</button>
-                                    <button className={Styles.btnCancel}>Cancelar</button>
+                                    <button  className={Styles.btnCancel}
+                                            onClick={()=>cancelReserve(r.id) +  console.log(r.id) }
+                                    >Cancelar</button>
                            
                             
                         </div>
@@ -78,7 +85,7 @@ export default function Reserves(){
                             <p className={Styles.dataText}>status</p>
                             <p className="text-white">  {r.status}</p>
                         </div>
-                            <button className={Styles.btnPay}>Pay</button>
+                            <button  className={Styles.btnPay}>Pay</button>
                             <button className={Styles.btnCancel}>Cancel</button>
                    
                     
