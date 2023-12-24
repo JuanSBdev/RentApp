@@ -24,8 +24,10 @@ export default function Reserves(){
     }
 
  return(
-    <div className={Styles.wrapper}>
-            <h1 className="text-white mt-4">Mis reservas</h1>
+     <div className={Styles.wrapper}>
+     { reservesRdx.length > 0 ? (
+        <>
+          <h1 className="text-white mt-4">Mis reservas</h1>
         {lang === 'es' ? (
             <div className={Styles.wrapperEs}>
 
@@ -59,11 +61,11 @@ export default function Reserves(){
                             
                         </div>
 
-                     ))}
+))}
             </div>
                     
-        ):(
-            <div className={Styles.wrapperEs}>
+                    ):(
+                        <div className={Styles.wrapperEs}>
 
             {reservesRdx.map(r =>( 
                 <div className={Styles.reserves}>
@@ -93,10 +95,25 @@ export default function Reserves(){
                     
                 </div>
 
-             ))}
+))}
     </div>
         )}
-    </div>
- )
+    </>
+        ):( 
+            <>
+            {lang === 'es' ? (
+                <p className="text-white m-5 p-5 ">Aún no has realizado reservas</p>
+                
+                ):(
+                    <p className="text-white m-5 p-5">You haven't made any reservations yet</p>
+                    )}
+            </>
+
+        )
+            
+    }
+        </div>
+            
+            )
 }
 
