@@ -3,7 +3,7 @@ import Styles from './Nav.module.css'
 import { useAuth0 } from "@auth0/auth0-react";
 import { useDispatch, useSelector } from 'react-redux';
 import { changeLanguage, postUser } from '../../redux/actions';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { ContactView } from '../../views/Contact/ContactView';
 export default function Nav() {
   const { loginWithRedirect, logout, user, isLoading} = useAuth0();
@@ -35,7 +35,7 @@ export default function Nav() {
       </label>
 
       {lang === 'es' ? ( <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Quiero alojar</a></li>
+        <li><Link to={'contactUs'}>Quiero alojar</Link></li>
         <li><NavLink to={'contactUs'}>
           Contacto
         </NavLink>
