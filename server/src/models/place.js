@@ -46,11 +46,11 @@ module.exports = (sequelize) =>{
             allowNull:true,
 
         },
-        unavailable_dates: {
-            type: DataTypes.ARRAY(DataTypes.DATEONLY),
-            allowNull:true,
+        // unavailable_dates: {
+        //     type: DataTypes.ARRAY(DataTypes.DATEONLY),
+        //     allowNull:true,
 
-        },
+        // },
         max_occupancy_per_room:{
             type: DataTypes.INTEGER,
             allowNull:true,

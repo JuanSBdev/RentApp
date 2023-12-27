@@ -33,7 +33,8 @@ console.log(dateInit)
         throw new Error('Ya existe una reserva para las fechas seleccionadas.');
     }
 
-   
+ 
+
    
     let total = await getPrice(placeFound, dateInit, dateEnd );
     
