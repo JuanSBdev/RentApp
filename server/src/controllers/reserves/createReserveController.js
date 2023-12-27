@@ -11,7 +11,7 @@ const createReserveController = async ( dateInit, dateEnd, userId, placeId )=>{
      if (!userFound) {
         throw new Error('User not found.');
     }
-
+console.log(dateInit)
     const placeFound = await Place.findByPk(placeId)
     const existingReservations = await Reserve.findAll({
         where: {
@@ -19,16 +19,15 @@ const createReserveController = async ( dateInit, dateEnd, userId, placeId )=>{
             [Op.or]: [
                 {
                     dateInit: {
-                        [Op.between]: [adjustedDateInit, adjustedDateEnd],
+                        [Op.lt]: adjustedDateEnd,
                     },
-                },
-                {
                     dateEnd: {
-                        [Op.between]: [adjustedDateInit, adjustedDateEnd],
+                        [Op.gt]: adjustedDateInit,
                     },
                 },
             ],
         },
+        
     });
     if (existingReservations.length > 0 || dateInit === dateEnd) {
         throw new Error('Ya existe una reserva para las fechas seleccionadas.');
@@ -45,13 +44,7 @@ const createReserveController = async ( dateInit, dateEnd, userId, placeId )=>{
     await newReserve.setUser(userFound);
     await newReserve.setPlace(placeFound);
 
-    const unavailableDates = placeFound.unavailable_dates || [];    
-     const datesToAdd = getDatesArray(dateInit, dateEnd);
-     const updatedUnavailableDates = [...unavailableDates, ...datesToAdd];
  
-     // Actualizar el modelo Place con las nuevas fechas no disponibles
-     await placeFound.update({ unavailable_dates: updatedUnavailableDates })
-
     return newReserve;
 }
-module.exports = createReserveController;8
+module.exports = createReserveController;
