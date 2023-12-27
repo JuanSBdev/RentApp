@@ -7,14 +7,33 @@ import {
   } from "@material-tailwind/react";
 import { useSelector } from "react-redux";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useState } from "react";
 
 export function ContactView() {
+    
     const { loginWithRedirect, logout, user, isLoading} = useAuth0();
-
-      let lang = useSelector(state => state.language)
-    //   let userRdx = isLoading === false ?  user : null
-
+    let lang = useSelector(state => state.language)
+    
     let consulta =  lang === 'es' ? 'Consulta' : 'Write here'
+let [form, setForm ] = useState({
+    name: '',
+    mail:'',
+    text:'',
+})
+
+let handleChange  = (e)=>{
+    let {name, value} = e.target
+
+    setForm((prevValues)=>({
+        ...prevValues,
+        [name]: value
+    })
+        )
+}
+let submitForm = ()=>{
+    console.log(form)
+}
+
     return (
         <div className=" flex  justify-center p-4  max-h-24">
 
@@ -31,6 +50,8 @@ export function ContactView() {
               Your Name
             </Typography>
             <Input
+              onChange={handleChange}
+              name="name"
               size="lg"
               placeholder="Stuart"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
@@ -42,6 +63,8 @@ export function ContactView() {
               Your Email
             </Typography>
             <Input
+              onChange={handleChange}
+              name="mail"
               size="lg"
               placeholder="name@mail.com"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
@@ -53,7 +76,8 @@ export function ContactView() {
              Your Questions Are Important to Us
             </Typography>
             <Textarea 
-              type="password"
+            onChange={handleChange}
+            name="text"
               size="lg"
               placeholder={consulta}
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
@@ -65,7 +89,7 @@ export function ContactView() {
           
           {lang === 'es' ? (
               
-              <Button  className="mt-6" fullWidth>
+              <Button  onClick={()=>submitForm()} className="mt-6" fullWidth>
                         Enviar
                 </Button>
 
