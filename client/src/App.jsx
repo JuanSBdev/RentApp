@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 import {Routes, Route} from "react-router-dom"
 import Detail from './views/Detail/Detail'
 import Reserves from './views/Reserves/ReservesView'
+import { ContactView } from './views/Contact/ContactView'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
       <Route path='/' Component={Start} />
       <Route path='/details/:id' Component={Detail} />
       <Route path='/reserves' Component={Reserves} />
+      <Route path='/contactUs' Component={ContactView} />
 
     </Routes>
       <Footer/>
