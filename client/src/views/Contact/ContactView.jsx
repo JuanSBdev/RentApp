@@ -1,26 +1,29 @@
 import {
     Card,
     Input,
-    Checkbox,
+    Textarea,
     Button,
     Typography,
   } from "@material-tailwind/react";
 import { useSelector } from "react-redux";
-   
+import { useAuth0 } from "@auth0/auth0-react";
 
 export function ContactView() {
-    
-      let lang = useSelector(state => state.language)
+    const { loginWithRedirect, logout, user, isLoading} = useAuth0();
 
+      let lang = useSelector(state => state.language)
+    //   let userRdx = isLoading === false ?  user : null
+
+    let consulta =  lang === 'es' ? 'Consulta' : 'Write here'
     return (
         <div className=" flex  justify-center p-4  max-h-24">
 
        <Card className="p-4  " color="white" shadow={false}>
         <Typography variant="h4" color="blue-gray">
-          Sign Up
+          Contact Us
         </Typography>
         <Typography color="gray" className="mt-1 font-normal">
-          Nice to meet you! Enter your details to register.
+        Share your details and drop us a message. We're here to help!
         </Typography>
         <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
           <div className="mb-1 flex flex-col gap-4">
@@ -29,7 +32,7 @@ export function ContactView() {
             </Typography>
             <Input
               size="lg"
-              placeholder="name@mail.com"
+              placeholder="Stuart"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                   className: "before:content-none after:content-none",
@@ -47,15 +50,15 @@ export function ContactView() {
                 }}
                 />
             <Typography variant="h6" color="blue-gray" className="-mb-3">
-              Password
+             Your Questions Are Important to Us
             </Typography>
-            <Input
+            <Textarea 
               type="password"
               size="lg"
-              placeholder="********"
+              placeholder={consulta}
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
-                className: "before:content-none after:content-none",
+                className: "before:content-none aftera:content-none",
             }}
             />
           </div>
@@ -70,12 +73,16 @@ export function ContactView() {
             Send
           </Button>
           )}
-          <Typography color="gray" className="mt-4 text-center font-normal">
-            Already have an account?{" "}
-            <a href="#" className="font-medium text-gray-900">
-              Sign In
-            </a>
-          </Typography>
+          {user && !isLoading ? (
+            <p> {user.given_name} We'll contact you back soon!</p>
+          ):(
+              <Typography color="gray" className="mt-4 text-center font-normal">
+              Users enjoy priority assistance! {" "}
+                <a href="#" className="font-medium text-gray-900">
+                  Sign Up
+                </a>
+              </Typography>
+          )}
         </form>
       </Card>
             </div>
