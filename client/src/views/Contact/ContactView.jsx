@@ -64,12 +64,13 @@ export function ContactView() {
           </div>
           
           {lang === 'es' ? (
-          <Button className="mt-6" fullWidth>
-          Enviar
-        </Button>
+              
+              <Button  className="mt-6" fullWidth>
+                        Enviar
+                </Button>
 
           ):(
-          <Button className="mt-6" fullWidth>
+          <Button className="mt-6" color="green" fullWidth>
             Send
           </Button>
           )}
@@ -78,8 +79,10 @@ export function ContactView() {
           ):(
               <Typography color="gray" className="mt-4 text-center font-normal">
               Users enjoy priority assistance! {" "}
-                <button onClick={()=> loginWithRedirect()} className="font-medium text-gray-900">
+                <button onClick={()=> loginWithRedirect()} className="font-medium " >
+                    <Typography color="green">
                   Sign Up
+                    </Typography>
                 </button>
               </Typography>
           )}

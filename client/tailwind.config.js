@@ -18,7 +18,12 @@ module.exports = withMT({
    './src/pages/**/*.{html,jsx}',
        './src/components/**/*.{html,jsx}',],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customGreen:{
+          50: '#28704C'},
+      },
+    },
   },
   plugins: [require("daisyui")],
 });
