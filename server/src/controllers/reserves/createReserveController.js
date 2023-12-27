@@ -1,7 +1,6 @@
 const { User, Reserve, Place } = require('../../db');
 const {Op} = require('sequelize')
 const getPrice = require('../../handlers/availability/getPrice');
-const getDatesArray = require('./getDatesArray');
 const createReserveController = async ( dateInit, dateEnd, userId, placeId )=>{
 
     const adjustedDateInit = new Date(`${dateInit}T12:00:00`);
