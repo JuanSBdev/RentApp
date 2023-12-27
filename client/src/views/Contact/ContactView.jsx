@@ -78,9 +78,9 @@ export function ContactView() {
           ):(
               <Typography color="gray" className="mt-4 text-center font-normal">
               Users enjoy priority assistance! {" "}
-                <a href="#" className="font-medium text-gray-900">
+                <button onClick={()=> loginWithRedirect()} className="font-medium text-gray-900">
                   Sign Up
-                </a>
+                </button>
               </Typography>
           )}
         </form>
