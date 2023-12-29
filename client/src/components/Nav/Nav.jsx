@@ -40,7 +40,10 @@ export default function Nav() {
           Contacto
         </NavLink>
         </li>
-        <li><a>¿Quienes somos?</a></li>
+        <li><NavLink to={'aboutUs'}>
+          ¿Quienes somos
+          </NavLink>
+        </li>
       </ul>):(
         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a>Become a host.</a></li>
