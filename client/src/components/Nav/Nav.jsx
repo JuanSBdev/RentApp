@@ -46,9 +46,13 @@ export default function Nav() {
         </li>
       </ul>):(
         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Become a host.</a></li>
-        <li><a>Contact Us</a></li>
-        <li><a>About</a></li>
+        <li><Link to={'contactUs'}>Become a host.</Link></li>
+        <li><NavLink to={'contactUs'}>
+        Get in touch
+        </NavLink></li>
+        <li><NavLink to={'aboutUs'}>
+          About Us
+          </NavLink></li>
       </ul>
       )
        }
