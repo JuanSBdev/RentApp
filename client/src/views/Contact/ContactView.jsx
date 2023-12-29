@@ -5,10 +5,8 @@ export function ContactView() {
 
 
     return (
-      <>
-      <ContactForm>
-
-      </ContactForm>
-      </>
+      <div className=" ">
+        <ContactForm />
+      </div>
       );
   }

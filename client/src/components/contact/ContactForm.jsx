@@ -35,9 +35,9 @@ let submitForm = ()=>{
 }
 
   return (
-<div className=" flex  justify-center p-4 ">
+<div className=" flex  justify-center py-[100px]  sm:p-4 ">
 
-<Card className="p-4 flex items-center  " color="white" shadow={false}>
+<Card className="p-4 flex items-center   " color="white" shadow={false}>
  <Typography variant="h4" className=" ml-12 self-start" color="blue-gray">
    Contact Us
  </Typography>
