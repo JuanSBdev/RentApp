@@ -95,7 +95,6 @@ return (
              <select onChange={handleForm} name='city' id="ciudades" className="flex items-center h-12 px-4 w-34  bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2">
                    <option value="capilla">Capilla del Monte</option>
                    <option value="carlos">San Marcos Sierras</option>
-                   <option value="falda">La Falda</option>
              </select>
              
            </div>
