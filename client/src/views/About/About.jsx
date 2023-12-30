@@ -10,11 +10,11 @@ import {
 export default function About() {
   return (
     <div>
-      <Typografy>
+      <Typography>
       Acerca de Kirá
     Bienvenido a Kirá, tu destino de confianza para alquileres temporales en la hermosa ciudad de Córdoba. Nos enorgullece ser la opción predilecta para aquellos que buscan una experiencia única durante sus vacaciones, ofreciendo alojamientos temporales excepcionales que se adaptan a todas las necesidades y estilos de vida.
 
-      </Typografy>
+      </Typography>
     
     Nuestra Misión
     En Kirá, nos apasiona crear momentos inolvidables al proporcionar a nuestros clientes alojamientos excepcionales y experiencias personalizadas durante su estancia en Córdoba. Nuestra misión es ser el puente entre los viajeros y las propiedades que harán que su estancia sea inolvidable, facilitando al máximo el proceso de alquiler y brindando un servicio que va más allá de las expectativas.
