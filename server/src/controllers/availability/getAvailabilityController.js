@@ -10,12 +10,12 @@ let getAvailabilityController = async (placeId, dateInit, dateEnd, guests)=>{
             max_occupancy_per_room:{
                 [Op.gte]: Number(guests)
             },
-            [Op.not]:{
-                unavailable_dates:{
-                    [Op.overlap]:[dateInit, dateEnd]
-                }
+            // [Op.not]:{
+            //     unavailable_dates:{
+            //         [Op.overlap]:[dateInit, dateEnd]
+            //     }
 
-            }
+            // }
         }
     })
     // console.log(result[0].price_per_night)

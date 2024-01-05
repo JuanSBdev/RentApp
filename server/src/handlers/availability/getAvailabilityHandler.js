@@ -6,6 +6,8 @@ let getAvailabilityHandler = async (req, res)=>{
     try {
       
         let result = await getAvailabilityController(id, dateInit, dateEnd, guests)
+                console.log(id, dateInit, dateEnd, guests)
+
         if( result.length === 0){
 
             res.status(200).json("No tiene disponibilidad para estas fechas o esta cantidad de personas")
