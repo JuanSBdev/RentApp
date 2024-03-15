@@ -40,7 +40,7 @@ let handleDate = (e)=>{
 }
 let submitForm =(e)=>{
   e.preventDefault()
-  // console.log(form.dateTo, form.dateFrom, form.guests, detail.id + 'from form Availability')
+  // console.log(detail.id , form.dateTo, form.dateFrom, form.guests,)
   if(!form.dateFrom && !form.dateTo && !form.guests){
       alert('Faltan datos')
   }
