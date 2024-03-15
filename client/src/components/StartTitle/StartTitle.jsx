@@ -6,7 +6,7 @@ export default function StartTitle() {
   let lang = useSelector(state=> state.language )
 
   return (
-    <div className={`${Styles.wrapper} flex justify-center w-100 mx-2 mt-10`}>
+    <div className={`${Styles.wrapper} flex justify-start w-100 mx-1 ml-12 mt-10`}>
       {lang === 'es' ? (
         <h1 className='flex justify-start '> Encontrá tu lugar en Córdoba, en Kirá</h1>
       ):(
