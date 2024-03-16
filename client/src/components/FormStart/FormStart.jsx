@@ -86,7 +86,7 @@ return (
              <label className="font-semibold text-xs mt-3"             htmlFor="passwordField">Personas</label>
              <input onChange={handleForm} name='guests' className="flex items-center h-12 px-4 w-20 bg-gray-200 mt-2             rounded focus:outline-none focus:ring-2"type="number" min="0" placeholder='x1'/>
            </div>
-             <Link to={`/places/${form.city}-${form.guests}-${form.dateFrom}-${form.dateTo}`} className="flex items-center justify-center h-12 px-6 w-64            bg-[#259073] mt-8 rounded font-bold text-sm text-blue-100            hover:bg-[#7fda89] mx-2">Buscar alojamiento </Link>
+             <Link to={`/places/${form.city}/${form.guests}/${form.dateFrom}/${form.dateTo}`} className="flex items-center justify-center h-12 px-6 w-64            bg-[#259073] mt-8 rounded font-bold text-sm text-blue-100            hover:bg-[#7fda89] mx-2">Buscar alojamiento </Link>
    
  </form>
   ):(
