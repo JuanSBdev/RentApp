@@ -24,25 +24,14 @@ useEffect(()=>{
     
   return (
     <div className={Styles.wrapper}>
-    { places === 'undefined' || places.length < 1 && 
-
-<StartTitle/>
-      }
+       <StartTitle/>
         <div className={Styles.divForm}>
             <FormStart/> 
        </div>
-       {
-        places.length > 1 ? (
-          <div className={Styles.place}>
-
-            <PlaceView/>
-          </div>
-        ):(
-          <div className={Styles.noPlace}>
+       <div className={Styles.noPlace}>
             <NoPlace/>
-          </div>
-        )
-        }
+       </div>
+      
     </div>
   )
 }
