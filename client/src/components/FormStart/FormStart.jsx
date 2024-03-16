@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Styles from './FormStart.module.css'
 import '../../../dist/output.css'; // Ajusta la ruta según la ubicación de tu archivo CSS
 import { useDispatch, useSelector } from 'react-redux';
-import { getPlaceByDate, getPlaceByGuest, getPlaceByName, getPlacesComplete } from '../../redux/actions';
+
 import { validateDispatch } from './validateDispatch';
 import { Link } from 'react-router-dom';
 
