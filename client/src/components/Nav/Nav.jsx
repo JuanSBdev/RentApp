@@ -64,7 +64,6 @@ export default function Nav() {
           <div className=" flex items-end navbar-center">
            <NavLink to={'/'} className=" normal-case font-bold text-xl text-[#fff]">Kirá
           </NavLink>
-           <p className="text-[white] text-xs ml-2 mb-1"> Argentina </p>
           </div>
         </div>
  

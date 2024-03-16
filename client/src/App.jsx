@@ -10,7 +10,7 @@ import Detail from './views/Detail/Detail'
 import Reserves from './views/Reserves/ReservesView'
 import { ContactView } from './views/Contact/ContactView'
 import About from './views/About/About'
-
+import PlaceView from './views/place/PlaceView'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -20,6 +20,7 @@ function App() {
       <Nav/>
     <Routes>
       <Route path='/' Component={Start} />
+      <Route path='/places/:city/:guests/:dateFrom/:dateTo' Component={PlaceView} />
       <Route path='/details/:id' Component={Detail} />
       <Route path='/reserves' Component={Reserves} />
       <Route path='/aboutUs' Component={About} />

@@ -27,7 +27,7 @@ useEffect(()=>{
     { places === 'undefined' || places.length < 1 && 
 
 <StartTitle/>
-    }
+      }
         <div className={Styles.divForm}>
             <FormStart/> 
        </div>
