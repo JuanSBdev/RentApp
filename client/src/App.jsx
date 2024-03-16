@@ -20,7 +20,7 @@ function App() {
       <Nav/>
     <Routes>
       <Route path='/' Component={Start} />
-      <Route path='/places/:city/:guests/:dateFrom/:dateTo' Component={PlaceView} />
+      <Route path='/places/:city?/:guests?/:dateFrom?/:dateTo?' Component={PlaceView} />
       <Route path='/details/:id' Component={Detail} />
       <Route path='/reserves' Component={Reserves} />
       <Route path='/aboutUs' Component={About} />

@@ -14,12 +14,13 @@ export default function PlaceView() {
 if(city && !dateFrom && !dateTo && !guests){
   dispatch(getPlaceByName(city))
 }
+else if(city && !dateFrom && !dateTo && guests){
+    dispatch(getPlaceByGuest(guests))
+    console.log(typeof(guests))
+}
 else if(!city && dateFrom || dateTo && !guests) {  
   dispatch(getPlaceByDate(dateFrom, dateTo))
 
-}
-else if(city && !dateFrom && !dateTo && guests){
-    dispatch(getPlaceByGuest(guests))
 }
 else  {
   dispatch( getPlacesComplete(city, dateFrom, dateTo, guests))
