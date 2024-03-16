@@ -1,7 +1,16 @@
 .wrapper{
     width: 100%;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
+    flex-flow: row wrap;
+}
+.filters{
+    width: 20%;
+    background-color: aliceblue;
+}
+.placesWrap{
+   width: 80%;
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+
 }

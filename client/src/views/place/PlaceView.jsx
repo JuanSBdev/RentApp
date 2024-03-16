@@ -7,19 +7,25 @@ export default function PlaceView() {
     let places = useSelector(state=> state.place)
       return (
           
-        <div className={Styles.wrapper}>{
-          places.map((place, index) => (
-            <Places key={index}
-            id={place.id}
-            max_occupancy_per_room={place.max_occupancy_per_room}
-            type={place.type}
-            name={place.name}
-            location={place.location}
-            price_per_night={place.price_per_night}
-            rating={place.rating}
-            
-            />
-        ))}
+        <div className={Styles.wrapper}>
+          <div className={Styles.filters}>
+            <p>asd</p>
+          </div>
+          <div className={Styles.placesWrap}>
+          {
+            places.map((place, index) => (
+              <Places key={index}
+              id={place.id}
+              max_occupancy_per_room={place.max_occupancy_per_room}
+              type={place.type}
+              name={place.name}
+              location={place.location}
+              price_per_night={place.price_per_night}
+              rating={place.rating}
+              
+              />
+              ))}
+          </div>
             </div>
   )
 }
