@@ -8,14 +8,14 @@ import { useParams } from 'react-router-dom'
 import { getPlaceByDate, getPlaceByGuest, getPlaceByName, getPlacesComplete } from '../../redux/actions';
 
 export default function PlaceView() {
-  let {dateFrom, dateTo, guests, city} = useParams()
+  let { dateFrom, dateTo, guests, city} = useParams()
   let dispatch = useDispatch()
   let submitForm =()=>{
 if(city && !dateFrom && !dateTo && !guests){
   dispatch(getPlaceByName(city))
 }
 else if(city && !dateFrom && !dateTo && guests){
-    dispatch(getPlaceByGuest(guests))
+    dispatch(getPlaceByGuest(city, guests))
     console.log(typeof(guests))
 }
 else if(!city && dateFrom || dateTo && !guests) {  
