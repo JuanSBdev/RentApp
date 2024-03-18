@@ -105,9 +105,9 @@ export const getPlaceByName = (placeName) =>{
     }
 } 
 
-export const getPlaceByGuest = (guestsQ)=>{
+export const getPlaceByGuest = (city, guestsQ)=>{
     return async (dispatch)=>{
-        let endpoint = `${URL}/place/for/${guestsQ}`
+        let endpoint = `${URL}/place/for/${city}/${guestsQ}`
         try {
             const response = await axios(endpoint)
             const data = response.data;
