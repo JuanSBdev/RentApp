@@ -40,20 +40,6 @@ let handleDate = ()=>{
     [name]: value
   }))
 }
-// let submitForm =(e)=>{
-//   e.preventDefault()
-//   // console.log(form.city + 'from form')
-//   if(form.city && !form.dateFrom && !form.dateTo && !form.guests){
-
-//     dispatch(getPlaceByName(form.city))
-//   }
-//   else if(!form.city && form.dateFrom || form.dateTo && !form.guests) {  dispatch(getPlaceByDate(form.dateFrom, form.dateTo))}
-//   else if(form.city && !form.dateFrom && !form.dateTo && form.guests){  dispatch(getPlaceByGuest(form.guests))}
-//   else  {dispatch( getPlacesComplete(form.city, form.dateFrom, form.dateTo, form.guests))}
- 
-//   // window.scrollBy(0, 500);
- 
-// }
 
 return (
 <div className= { `${Styles.wrapper} flex flex-col items-center justify-center w-screen h-screen ` }  >
