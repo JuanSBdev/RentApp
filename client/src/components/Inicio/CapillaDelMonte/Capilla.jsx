@@ -25,7 +25,7 @@ export default function Capilla() {
     
         <img className={`rounded-t-lg ${Styles.img_card}`} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXBOBKVMmyj5MSkCcS5UUBinnzSvGYL3_cyLjqmElovA&s" alt="" />
     
-            <p className='absolute text-center w-full top-1/2 '>Capilla del monte</p>
+            <p className='absolute text-center w-full top-1/2  text-2xl text-white'>Capilla del Monte</p>
 
             </div>
     </Link>
