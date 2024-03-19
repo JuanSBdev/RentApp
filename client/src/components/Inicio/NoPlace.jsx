@@ -7,8 +7,11 @@ import Carlos from './CarlosPaz/SanMarcos';
 
 export default function NoPlace() {
   return (
-    <div className={`${Styles.wrapper} flex flex-col md:flex-row gap-2 xl:gap-0 justify-around flex-nowrap lg:-mt-40  items-center  content-center` }>
+    <div className={`${Styles.wrapper} flex wrap  md:flex-row gap-6 xl:gap-4 max-w-screen-lg justify-around flex-wrap lg:-mt-40  items-stretch content-center` }>
+      
       <Capilla/>
+      <Capilla/>
+      <Carlos/>
       <Carlos/>
     </div>
   )

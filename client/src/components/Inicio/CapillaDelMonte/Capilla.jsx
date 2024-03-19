@@ -23,7 +23,8 @@ export default function Capilla() {
                     <Link to={`/places/capilla`}> 
                 <div className=" relative bm-0 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex items-center h-full " >
     
-        <img className={`rounded-t-lg ${Styles.img_card}`} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXBOBKVMmyj5MSkCcS5UUBinnzSvGYL3_cyLjqmElovA&s" alt="" />
+        <img className={` w-full 
+        h-full rounded-t-lg ${Styles.img_card}`} src="https://www.cordobaturismo.gov.ar/wp-content/uploads/2018/09/16707573_10155792909783840_5514747335741479490_o.jpg" alt="" />
     
             <p className='absolute text-center w-full top-1/2  text-2xl text-white'>Capilla del Monte</p>
 

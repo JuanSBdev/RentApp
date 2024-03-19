@@ -28,7 +28,7 @@ useEffect(()=>{
         <div className={Styles.divForm}>
             <FormStart/> 
        </div>
-       <div className={Styles.noPlace}>
+       <div className={`${Styles.noPlace} flex justify-center`}>
             <NoPlace/>
        </div>
       

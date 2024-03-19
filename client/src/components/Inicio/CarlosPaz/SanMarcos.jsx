@@ -12,9 +12,10 @@ export default function Carlos() {
     <div>
         {lang === 'es' ? (
                 <Link to={`/places/marcos`}> 
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <img className={`rounded-t-lg ${Styles.img_card}`} src="https://i.ytimg.com/vi/W_3gklgnq3w/mqdefault.jpg" alt="" />
-                <p>San Marcos Sierras</p>            
+            <div className="relative max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex h-full ">
+                <img className={`w-full 
+        h-full rounded-t-lg ${Styles.img_card}`} src="https://www.cordobaturismo.gov.ar/wp-content/uploads/2018/09/16707573_10155792909783840_5514747335741479490_o.jpg" alt="" />
+                <p className='absolute top-1/2 text-center w-full  text-2xl text-white'>San Marcos Sierras</p>            
           
         </div>
             </Link>
