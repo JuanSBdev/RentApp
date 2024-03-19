@@ -18,28 +18,17 @@ export default function Capilla() {
     //     dispatch(getPlaceByName('capilla'))
     // }
   return (
-    <div>
+    <div className=''>
             {lang === 'es' ? (
-            <div className=" mb-0 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <Link to={`/places/capilla`}> 
+                    <Link to={`/places/capilla`}> 
+                <div className=" relative bm-0 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex items-center h-full " >
     
-        <img className={`rounded-t-lg ${Styles.img_card}`} src="https://www.voydeviaje.com.ar/resizer/6-koTns6uUvdPUIGT4njV_He6TM=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/QUBMPWQO2VEXRLCB5XTUTCHKYY.jpg" alt="" />
+        <img className={`rounded-t-lg ${Styles.img_card}`} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXBOBKVMmyj5MSkCcS5UUBinnzSvGYL3_cyLjqmElovA&s" alt="" />
     
-    <div className="p-5">
-        
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Temporada Capilla Del Monte 2024</h5>
-        
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Encontrá tu alojamiento al mejor precio en Capilla Del Monte, Córdoba para esta temporada 2024</p>
-        <button   className="flex items-center justify-center h-12 px-6 w-64 bg-[#259073] mt-8 rounded font-bold text-sm text-white  hover:bg-[#7fda89] mx-2">
-            Buscar
-             <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-            </svg>
-        </button>
-    </div>
-    </Link>
+            <p className='absolute text-center w-full top-1/2 '>Capilla del monte</p>
 
             </div>
+    </Link>
             ):(
                 
         
