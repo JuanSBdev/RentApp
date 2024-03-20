@@ -7,12 +7,16 @@ const initialState = {
     reserves:[],
     cityStart: [
         {name: 'Capilla del Monte',
+        link: '/places/capilla',
             img:'https://www.cordobaturismo.gov.ar/wp-content/uploads/2018/09/16707573_10155792909783840_5514747335741479490_o.jpg'},
         {name: 'San Marcos Sierras',
+        link: '/places/marcos',
         img:'https://www.cordobaturismo.gov.ar/wp-content/uploads/2018/09/16707573_10155792909783840_5514747335741479490_o.jpg'},
         {name: 'Cote d Azur',
+        link: '/places/cote',
         img:'https://www.cordobaturismo.gov.ar/wp-content/uploads/2018/09/16707573_10155792909783840_5514747335741479490_o.jpg'},
         {name: 'Bariloche',
+        link: '/places/bariloche',
         img:'https://www.cordobaturismo.gov.ar/wp-content/uploads/2018/09/16707573_10155792909783840_5514747335741479490_o.jpg'},
        ],
     language: 'es'

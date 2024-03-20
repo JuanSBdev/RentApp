@@ -7,7 +7,7 @@ import { getPlaceByName } from '../../../redux/actions';
 
 
 
-export default function Capilla({name, img}) {
+export default function Capilla({name, img, link}) {
 
 
     let dispatch = useDispatch()
@@ -18,7 +18,7 @@ export default function Capilla({name, img}) {
   return (
     <div className=''>
             {lang === 'es' ? (
-                    <Link to={`/places/capilla`}> 
+                    <Link to={link}> 
                 <div className=" relative bm-0 max-w-sm bg-white  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex items-center h-full " >
     
         <img className={` hover:blur-sm blur-none w-full 
@@ -32,7 +32,7 @@ export default function Capilla({name, img}) {
                 
         
             <div className=" mb-0 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <Link to={`/places/capilla`}> 
+                <Link to={link}> 
                 
                     <img className={`rounded-t-lg ${Styles.img_card}`} src="https://www.voydeviaje.com.ar/resizer/6-koTns6uUvdPUIGT4njV_He6TM=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/QUBMPWQO2VEXRLCB5XTUTCHKYY.jpg" alt="" />
                 
