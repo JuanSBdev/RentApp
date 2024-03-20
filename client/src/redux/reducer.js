@@ -5,6 +5,12 @@ const initialState = {
     availability:[],
     user:[],
     reserves:[],
+    cityStart: [
+        {name: 'Capilla del Monte'},
+        {name: 'San Marcos Sierras'},
+        {name: 'Cote d Azur'},
+        {name: 'Bariloche'},
+       ],
     language: 'es'
 }
 

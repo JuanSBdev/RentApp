@@ -6,12 +6,7 @@ import Carlos from './CarlosPaz/SanMarcos';
 
 
 export default function NoPlace() {
-  let cityStart =  [
-    {name: 'Capilla del Monte'},
-    {name: 'San Marcos Sierras'},
-    {name: 'Cote d Azur'},
-    {name: 'Bariloche'},
-   ]
+ 
   return (
     <div className="flex flex-col ">
       <div className="p-4 flex gap-1">
