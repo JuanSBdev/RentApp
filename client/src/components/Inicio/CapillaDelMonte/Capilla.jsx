@@ -7,26 +7,24 @@ import { getPlaceByName } from '../../../redux/actions';
 
 
 
-export default function Capilla() {
+export default function Capilla(props) {
 
 
     let dispatch = useDispatch()
 
     let lang = useSelector(state=> state.language)
 
-    // let buscarEnCapilla = ()=>{
-    //     dispatch(getPlaceByName('capilla'))
-    // }
+    
   return (
     <div className=''>
             {lang === 'es' ? (
                     <Link to={`/places/capilla`}> 
-                <div className=" relative bm-0 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex items-center h-full " >
+                <div className=" relative bm-0 max-w-sm bg-white  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex items-center h-full " >
     
-        <img className={` w-full 
+        <img className={` hover:blur-sm blur-none w-full 
         h-full rounded-t-lg ${Styles.img_card}`} src="https://www.cordobaturismo.gov.ar/wp-content/uploads/2018/09/16707573_10155792909783840_5514747335741479490_o.jpg" alt="" />
     
-            <p className='absolute text-center w-full top-1/2  text-2xl text-white'>Capilla del Monte</p>
+            <p className='absolute text-center w-full top-1/2  text-3xl text-white'>Capilla del Monte</p>
 
             </div>
     </Link>
