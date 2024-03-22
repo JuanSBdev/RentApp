@@ -45,7 +45,7 @@ return (
 <div className= { `${Styles.wrapper} flex flex-col items-center justify-center w-screen h-screen` }  >
    {lang === 'es' ? (
        
-       <form  className=" border border-[#259073] flex flex-col items-center bg-[#fcffee] rounded shadow-lg p-5  lg:flex-row " action="">
+       <form  className="  flex flex-col items-center bg-white rounded shadow-lg p-4  lg:flex-row " action="">
            <div >
 
              <label className="font-semibold text-xs" htmlFor="usernameField">Ciudad</label>
@@ -72,11 +72,11 @@ return (
              <label className="font-semibold text-xs mt-3"             htmlFor="passwordField">Personas</label>
              <input onChange={handleForm} name='guests' className="flex items-center h-12 px-4 w-20 bg-gray-200 mt-2             rounded focus:outline-none focus:ring-2"type="number" min="0" placeholder='x1'/>
            </div>
-             <Link to={`/places/${form.city}/${form.guests}/${form.dateFrom}/${form.dateTo}`} className="flex items-center justify-center h-12 px-6 w-64            bg-[#259073] mt-8 rounded font-bold text-sm text-blue-100            hover:bg-[#7fda89] mx-2">Buscar alojamiento </Link>
+             <Link to={`/places/${form.city}/${form.guests}/${form.dateFrom}/${form.dateTo}`} className="flex items-center justify-center h-12 px-6 w-64            bg-[#259073] mt-8 rounded font-bold text-sm text-white            hover:bg-[#7fda89] mx-2">Buscar alojamiento </Link>
    
  </form>
   ):(
-    <form  className=" border border-[#259073] flex flex-col items-center bg-[#fcffee] rounded shadow-lg p-5 mt-0  lg:flex-row " action="">
+    <form  className="  flex flex-col items-center bg-white rounded shadow-lg p-4 mt-0  lg:flex-row " action="">
            <div >
 
              <label className="font-semibold text-xs" htmlFor="usernameField">City</label>
@@ -108,7 +108,7 @@ return (
              <input onChange={handleForm} name='guests' className="flex items-center h-12 px-4 w-20 bg-gray-200 mt-2             rounded focus:outline-none focus:ring-2"type="number" min="0" placeholder='x1'/>
            </div>
 
-           <Link   to={`/places/${form.city}-${form.guests}-${form.dateFrom}-${form.dateTo}`} className="flex items-center justify-center h-12 px-6 w-64            bg-[#259073] mt-8 rounded font-bold text-sm text-blue-100            hover:bg-[#7fda89] mx-2">
+           <Link   to={`/places/${form.city}-${form.guests}-${form.dateFrom}-${form.dateTo}`} className="flex items-center justify-center h-12 px-6 w-64            bg-[#259073] mt-8 rounded font-bold text-sm text-white            hover:bg-[#7fda89] mx-2">
               Search
            </Link>
    
