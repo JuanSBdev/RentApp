@@ -22,7 +22,8 @@ module.exports = withMT({
       colors: {
         customGreen:{
           50: '#28704C'},
-      },
+        tryGreen:'#17b978'
+            },
     },
   },
   plugins: [require("daisyui")],

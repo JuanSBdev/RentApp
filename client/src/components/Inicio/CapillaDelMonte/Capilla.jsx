@@ -38,7 +38,7 @@ export default function Capilla({name, img, link}) {
                 
                 <div className="p-5">
                     
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> Capilla Del Monte season 2024</h5>
+                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> {name} season 2025</h5>
                     
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Explore the best accommodation rates in Capilla Del Monte, Córdoba, for the upcoming 2024 season.</p>
                     <button   className="flex items-center justify-center h-12 px-6 w-64 bg-[#259073] mt-8 rounded font-bold text-sm text-white  hover:bg-[#7fda89] mx-2">

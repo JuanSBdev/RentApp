@@ -44,14 +44,18 @@ let handleDate = ()=>{
 return (
 <div className= { `${Styles.wrapper} flex flex-col items-center justify-center w-screen h-screen` }  >
    {lang === 'es' ? (
-       
-       <form  className="  flex flex-col items-center bg-white rounded shadow-lg p-4  lg:flex-row " action="">
+     <form  className="  flex flex-col items-center bg-white rounded shadow-lg p-4  lg:flex-row " action="">
+      <div className="imgContianer">
+        <img src="https://i.ibb.co/ykvV9vP/KiraLogo.png" alt="Logo  Kirá" className='w-1/5 ' />
+
+      </div>
            <div >
 
              <label className="font-semibold text-xs" htmlFor="usernameField">Ciudad</label>
              <select onChange={handleForm} name='city' id="ciudades" className="flex items-center h-12 px-4 w-34  bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2">
                   <option value="capilla">Capilla del Monte</option>
                    <option value="marcos">San Marcos Sierras</option>
+                   <option value="marcos">La Falda</option>
              </select>
              
            </div>
@@ -72,7 +76,7 @@ return (
              <label className="font-semibold text-xs mt-3"             htmlFor="passwordField">Personas</label>
              <input onChange={handleForm} name='guests' className="flex items-center h-12 px-4 w-20 bg-gray-200 mt-2             rounded focus:outline-none focus:ring-2"type="number" min="0" placeholder='x1'/>
            </div>
-             <Link to={`/places/${form.city}/${form.guests}/${form.dateFrom}/${form.dateTo}`} className="flex items-center justify-center h-12 px-6 w-64            bg-[#259073] mt-8 rounded font-bold text-sm text-white            hover:bg-[#7fda89] mx-2">Buscar alojamiento </Link>
+             <Link to={`/places/${form.city}/${form.guests}/${form.dateFrom}/${form.dateTo}`} className="flex items-center justify-center h-12 px-6 w-64            bg-tryGreen mt-8 rounded font-bold text-sm text-white            hover:bg-[#7fda89] mx-2">Buscar alojamiento </Link>
    
  </form>
   ):(
