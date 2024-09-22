@@ -42,17 +42,17 @@ let handleDate = ()=>{
 }
 
 return (
+          
 <div className= { `${Styles.wrapper} flex flex-col items-center justify-center w-screen h-screen` }  >
-   {lang === 'es' ? (
-     <form  className="  flex flex-col items-center bg-white rounded shadow-lg p-4  lg:flex-row " action="">
-      <div className="imgContianer">
-        <img src="https://i.ibb.co/ykvV9vP/KiraLogo.png" alt="Logo  Kirá" className='w-1/5 ' />
 
-      </div>
-           <div >
+   {lang === 'es' ? (
+
+     <form  className="  flex flex-col items-center bg-white rounded shadow-lg p-4  lg:flex-row " action="">
+
+           <div className='' >
 
              <label className="font-semibold text-xs" htmlFor="usernameField">Ciudad</label>
-             <select onChange={handleForm} name='city' id="ciudades" className="flex items-center h-12 px-4 w-34  bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2">
+             <select onChange={handleForm} name='city' id="ciudades" className="flex items-center h-12 px-4 w-96 w-md  bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2">
                   <option value="capilla">Capilla del Monte</option>
                    <option value="marcos">San Marcos Sierras</option>
                    <option value="marcos">La Falda</option>

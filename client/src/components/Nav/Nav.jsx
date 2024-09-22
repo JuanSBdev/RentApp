@@ -26,7 +26,7 @@ export default function Nav() {
 
 
   return (
-  <div className={Styles.wrapperNav}> 
+  <div className={`${Styles.wrapperNav} bg-tryGreen`}> 
     <div className="navbar justify-between ">
         <div className="menu-logo">
           <div className="navbar-start">
@@ -62,7 +62,12 @@ export default function Nav() {
     </div>
           </div>
           <div className=" flex items-end navbar-center">
-           <NavLink to={'/'} className=" normal-case font-bold text-xl text-[#fff]">Kirá
+           <NavLink to={'/'} className=" normal-case font-bold text-xl text-[#fff]">
+
+           <div className="imgContianer">
+            <img src="https://i.ibb.co/SJPWsdn/Kira-Logo-X.png" alt="Logo  Kirá" className='w-1/12  flex  justify-center align-center ' />
+          </div>
+
           </NavLink>
           </div>
         </div>
