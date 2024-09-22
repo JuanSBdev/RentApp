@@ -62,7 +62,7 @@ export default function Places(props) {
 
       <div>
           
-          <img src="https://source.unsplash.com/random/350x350" alt=" random imgee" className="w-full object-cover object-center rounded-lg shadow-md"/>    
+          <img src="https://picsum.photos/200/300" alt=" random imgee" className="w-full object-cover object-center rounded-lg shadow-md"/>    
           
        <div className="relative px-4 -mt-16  ">
          <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -88,7 +88,7 @@ export default function Places(props) {
                   </div>
                   <div className="mt-1">
                     <span className="text-[#55EB7A] text-md font-semibold">{props.rating} / 5 </          span>
-                    <span className="text-sm text-gray-600">(234)</span>
+                    <span className="text-sm text-gray-600">(214)</span>
                   </div> 
           </div>
 
